@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Colvesta — About</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="description" content="Why Colvesta exists, and the story behind a quiet platform built for people who take their collections seriously." />
+<meta name="theme-color" content="#0D0B08" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Colvesta" />
+<meta property="og:title" content="About Colvesta — Built for Collectors" />
+<meta property="og:description" content="Why Colvesta exists, and the story behind a quiet platform built for people who take their collections seriously." />
+<meta property="og:url" content="https://colvesta.com/about" />
+<meta property="og:image" content="https://colvesta.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Colvesta — The collector's ledger" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="About Colvesta — Built for Collectors" />
+<meta name="twitter:description" content="Why Colvesta exists, and the story behind a quiet platform built for people who take their collections seriously." />
+<meta name="twitter:image" content="https://colvesta.com/assets/og-image.png" />
+
+<link rel="canonical" href="https://colvesta.com/about" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   COLVESTA — About (editorial long-form)
+   ============================================================ */
+:root {
+  --obsidian:        #0D0B08;
+  --obsidian-soft:   #1E1A14;
+  --ivory:           #F5F0E8;
+  --ivory-warm:      #EDE6D8;
+  --paper:           #FFFFFF;
+  --gold:            #C9A84C;
+  --gold-dark:       #A07C2A;
+  --gold-light:      #E2C97E;
+  --rule:            rgba(13,11,8,0.10);
+  --rule-gold:       rgba(201,168,76,0.35);
+  --muted:           #6B6457;
+  --muted-2:         #8A8474;
+
+  --font-display:    'Cormorant Garamond','Garamond','Georgia',serif;
+  --font-body:       'DM Sans','Helvetica Neue',sans-serif;
+  --font-mono:       'JetBrains Mono','Menlo',monospace;
+
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+
+  --nav-h:           76px;
+  --max-w:           1280px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+html, body {
+  background: var(--ivory);
+  color: var(--obsidian);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--gold); color: var(--obsidian); }
+a { color: inherit; text-decoration: none; }
+
+.wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+
+/* ============================================================
+   NAV (shared)
+   ============================================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  height: var(--nav-h);
+  background: rgba(245,240,232,0.82);
+  backdrop-filter: saturate(140%) blur(18px);
+  -webkit-backdrop-filter: saturate(140%) blur(18px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.brand {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-body); font-weight: 500; font-size: 15px;
+  letter-spacing: -0.01em; color: var(--obsidian);
+}
+.brand svg { width: 30px; height: 30px; display: block; }
+.back {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500;
+  color: var(--obsidian);
+  transition: color 200ms var(--ease-out);
+}
+.back .arrow { transition: transform 250ms var(--ease-out); display: inline-block; }
+.back:hover { color: var(--gold-dark); }
+.back:hover .arrow { transform: translateX(-4px); }
+
+/* ============================================================
+   PAGE HEAD
+   ============================================================ */
+.page {
+  padding-top: calc(var(--nav-h) + 96px);
+  padding-bottom: 120px;
+}
+.page-head {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  text-align: left;
+}
+.page-eyebrow {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold-dark); margin-bottom: 28px;
+}
+.page-eyebrow .dash { display: inline-block; width: 36px; height: 1px; background: var(--gold); }
+.page-title {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(48px, 6.2vw, 80px);
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+  color: var(--obsidian);
+}
+.page-title em { font-style: italic; color: var(--gold-dark); font-weight: 500; }
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--rule-gold) 30%, transparent 100%);
+  max-width: 760px;
+  margin: 56px auto 80px;
+}
+
+/* ============================================================
+   PROSE
+   ============================================================ */
+.prose {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--obsidian);
+}
+.prose .lede {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  color: var(--obsidian);
+  margin-bottom: 56px;
+  text-wrap: pretty;
+}
+.prose h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 3.2vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.018em;
+  color: var(--obsidian);
+  margin: 64px 0 24px;
+  text-wrap: balance;
+}
+.prose h2:first-of-type { margin-top: 8px; }
+.prose p { margin-bottom: 22px; text-wrap: pretty; }
+.prose p:last-child { margin-bottom: 0; }
+.prose p strong { font-weight: 600; }
+
+/* Pull quote */
+.prose .pull {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(26px, 3.4vw, 32px);
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+  color: var(--obsidian);
+  border-left: 2px solid var(--gold);
+  padding: 8px 0 8px 28px;
+  margin: 40px 0 40px 0;
+  text-wrap: pretty;
+}
+
+/* Closing line */
+.prose .close {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--gold-dark);
+  margin-top: 56px;
+  margin-bottom: 0;
+}
+
+/* Founder card */
+.founder {
+  max-width: 760px;
+  margin: 88px auto 0;
+  padding: 32px 36px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--gold);
+  border-radius: 4px;
+  display: flex; align-items: center; gap: 24px;
+}
+.founder .avatar {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--ivory-warm);
+  border: 1.5px solid var(--gold);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.founder .avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.founder .info { display: flex; flex-direction: column; gap: 4px; }
+.founder .name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--obsidian);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.founder .role {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+/* ============================================================
+   CROSS LINKS + FOOT
+   ============================================================ */
+.cross {
+  max-width: 760px;
+  margin: 96px auto 0;
+  padding-top: 56px;
+  border-top: 1px solid var(--rule-gold);
+}
+.cross-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.cross-card {
+  display: block;
+  padding: 32px 28px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  transition: transform 250ms var(--ease-out), border-color 250ms var(--ease-out), box-shadow 250ms var(--ease-out);
+}
+.cross-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 32px rgba(13,11,8,0.06);
+}
+.cross-card .cap {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold-dark); margin-bottom: 12px;
+}
+.cross-card .ttl {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 24px; letter-spacing: -0.01em;
+  color: var(--obsidian);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.cross-card .ttl .arrow {
+  font-family: var(--font-body); font-size: 18px; color: var(--gold-dark);
+  transition: transform 250ms var(--ease-out);
+}
+.cross-card:hover .ttl .arrow { transform: translateX(6px); }
+
+.foot-social {
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.foot-social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #F5F0E8; opacity: 0.5;
+  transition: opacity 200ms var(--ease-out);
+}
+.foot-social a:hover { opacity: 1; }
+.foot-social svg { display: block; width: 18px; height: 18px; }
+.foot {
+  max-width: 760px;
+  margin: 80px auto 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+  font-size: 12px; color: var(--muted);
+}
+.foot .mono { font-family: var(--font-mono); letter-spacing: 0.04em; }
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 720px) {
+  .wrap { padding: 0 22px; }
+  .page { padding-top: calc(var(--nav-h) + 56px); padding-bottom: 80px; }
+  .rule { margin: 40px auto 56px; }
+  .prose { font-size: 16px; }
+  .prose .lede { font-size: 22px; margin-bottom: 40px; }
+  .prose h2 { margin-top: 48px; }
+  .prose .pull { font-size: 22px; padding-left: 20px; margin: 32px 0; }
+  .founder { flex-direction: column; align-items: flex-start; text-align: left; padding: 24px; }
+  .cross-grid { grid-template-columns: 1fr; }
+  .foot { flex-direction: column; gap: 10px; }
+}
+@media (max-width: 560px) {
+  .back span:not(.arrow) { display: none; }
+  .back::after { content: "Home"; letter-spacing: 0.08em; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="Whitelist Landing Page.html" aria-label="Colvesta home">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M60,16 C60,9.373 54.627,4 48,4 L16,4 C9.373,4 4,9.373 4,16 L4,48 C4,54.627 9.373,60 16,60 L48,60 C54.627,60 60,54.627 60,48 L60,42 L48,42 C48,47.523 44.418,52 38,52 L26,52 C18.268,52 12,45.732 12,38 L12,26 C12,18.268 18.268,12 26,12 L38,12 C44.418,12 48,16.477 48,22 L60,22 Z" fill="#C9A84C"/>
+      </svg>
+      <span>Colvesta</span>
+    </a>
+    <a class="back" href="Whitelist Landing Page.html">
+      <span class="arrow">←</span><span>Back to Home</span>
+    </a>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap">
+
+    <header class="page-head">
+      <div class="page-eyebrow reveal"><span class="dash"></span>The collector's ledger · Est. 2026</div>
+      <h1 class="page-title reveal">Built by a collector,<br/>for <em>collectors</em>.</h1>
+    </header>
+
+    <div class="rule"></div>
+
+    <article class="prose">
+      <p class="lede reveal">The collector's ledger. Built by a collector, for collectors.</p>
+
+      <h2 class="reveal">The problem with collections is that they grow.</h2>
+      <p class="reveal">Philip S. started collecting at seven years old. Pokémon cards first — the kind you'd trade at recess, negotiate over lunch, and guard with a level of seriousness no adult around you quite understood. Then figures. Then, years later, watches.</p>
+      <p class="reveal">At some point, what started as a passion became a storage problem. Boxes in the closet. Pieces in a back room. A collection that had grown quietly over the years into something he could no longer see clearly — let alone value.</p>
+
+      <blockquote class="pull reveal">"I knew I had things. I just didn't know what I had."</blockquote>
+
+      <p class="reveal">The irony wasn't lost on him. He'd spent years acquiring pieces he genuinely loved, and somewhere along the way he'd lost the thread. He couldn't tell you how many items he owned, what they were worth, or even where half of them were.</p>
+
+      <h2 class="reveal">The moment it clicked</h2>
+      <p class="reveal">Philip spent time living in Switzerland — a country where craft, precision, and the idea that objects carry lasting value are woven into everyday life. Surrounded by a culture that takes horology seriously as both art and engineering, his appreciation for collecting deepened. He began to understand that a collection isn't just an accumulation of things. It's a record. A reflection of taste, memory, and time.</p>
+      <p class="reveal">He came back with a clearer eye — and a sharper frustration with the tools available to collectors. Spreadsheets. Notes apps. Photos buried in camera rolls. Nothing built for the way collectors actually think about their pieces.</p>
+
+      <h2 class="reveal">Two friends. Two niches. One idea.</h2>
+      <p class="reveal">Around the same time, something small happened that made the problem impossible to ignore.</p>
+      <p class="reveal">He had a friend who shared his love of Pokémon cards. They'd been trading since they were kids — quiet exchanges, pieces shown only to each other, never to the world. That kind of collector relationship: private, trusted, between two people who actually understood what they were looking at.</p>
+      <p class="reveal">Then there was another friend — a watch enthusiast. Philip had gotten pulled into horology gradually, the way it tends to happen, and the two of them had developed a ritual of sharing new acquisitions. A new piece would arrive and they'd talk about it. The brand, the reference, the story behind it.</p>
+      <p class="reveal">The problem: there was no good place for any of this to live. No shared space that wasn't a group chat or an Instagram post. No way to say "here's my collection — not for sale, not for likes, just to show you."</p>
+
+      <blockquote class="pull reveal">That's when Colvesta became inevitable.</blockquote>
+
+      <h2 class="reveal">What Colvesta is</h2>
+      <p class="reveal">Colvesta is a collector showcase platform for iOS. It's not a marketplace. It's not a price tracker. It's the place where your collection finally has a home — organized, valued, and shareable with the people who matter.</p>
+      <p class="reveal">You catalog your pieces. Colvesta estimates their market value in real time, pulling from specialized data sources by category. You build your circle — the collectors whose taste you trust. And when your friend adds a new watch, you see it. You can appreciate it. That's the experience we built for.</p>
+      <p class="reveal">Every niche. One platform. Watches, cards, figures, coins, bags, sneakers, art, vinyl, whiskey, and beyond.</p>
+
+      <h2 class="reveal">Built with quiet attention.</h2>
+      <p class="reveal">Colvesta is currently in development, launching on the App Store in 2026.</p>
+
+      <div class="founder reveal">
+        <div class="avatar" aria-hidden="true"><img src="assets/philip-s-avatar.jpeg" alt="Philip S." /></div>
+        <div class="info">
+          <div class="name">Philip S.</div>
+          <div class="role">Founder</div>
+        </div>
+      </div>
+    </article>
+
+    <div class="cross">
+      <div class="cross-grid">
+        <a class="cross-card" href="journal.html">
+          <div class="cap">Read on</div>
+          <div class="ttl"><span>Journal</span><span class="arrow">→</span></div>
+        </a>
+        <a class="cross-card" href="contact.html">
+          <div class="cap">Reach out</div>
+          <div class="ttl"><span>Contact</span><span class="arrow">→</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="foot">
+      <span>© 2026 Colvesta, Inc. · Made with quiet attention.</span>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/colvesta.app/" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://x.com/Colvesta_app" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.53 3h2.97l-6.49 7.41L21.75 21h-6.02l-4.71-6.16L5.6 21H2.62l6.94-7.93L2.25 3h6.17l4.26 5.63L17.53 3zm-1.06 16.2h1.66L7.62 4.7H5.84l10.63 14.5z"/></svg>
+        </a>
+      </div>
+      <span class="mono">About · v 1.0</span>
+    </div>
+
+  </div>
+</main>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+
+<!-- Page-fade transition: dark bridge between landing and interior pages -->
+<style>
+  .page-fade {
+    position: fixed; inset: 0;
+    background: #000;
+    z-index: 99999;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 200ms ease-out;
+  }
+  .page-fade.is-ready { opacity: 0; }
+  .page-fade.is-leaving { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .page-fade { transition: none; opacity: 0 !important; }
+  }
+</style>
+<script>
+(function () {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+  // Theme detection — landing page = dark, all others = light.
+  var landingFile = 'whitelist landing page.html';
+  function isDark(pathname) {
+    try { return decodeURIComponent(pathname).toLowerCase().endsWith(landingFile); }
+    catch (_) { return false; }
+  }
+  var thisIsDark = isDark(location.pathname);
+
+  // Should we fade IN on load? Only if the previous page was on the other theme.
+  var shouldFadeIn = false;
+  if (document.referrer) {
+    try {
+      var ref = new URL(document.referrer);
+      if (ref.origin === location.origin && isDark(ref.pathname) !== thisIsDark) {
+        shouldFadeIn = true;
+      }
+    } catch (_) {}
+  }
+
+  var overlay = document.createElement('div');
+  overlay.className = 'page-fade';
+  overlay.setAttribute('aria-hidden', 'true');
+  if (!shouldFadeIn) overlay.classList.add('is-ready'); // append already hidden — no flash
+  document.body.appendChild(overlay);
+  if (shouldFadeIn) {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { overlay.classList.add('is-ready'); });
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href) return;
+    if (a.target && a.target !== '' && a.target !== '_self') return;
+    if (a.hasAttribute('download')) return;
+    if (e.button !== 0) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (e.defaultPrevented) return;
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) return;
+    if (href.charAt(0) === '#') return;
+    var dest;
+    try { dest = new URL(a.href, location.href); }
+    catch (_) { return; }
+    if (dest.origin !== location.origin) return;
+    // Same path, only hash change -> let browser handle it (in-page jump)
+    if (dest.pathname === location.pathname && dest.search === location.search && dest.hash && dest.hash !== location.hash) return;
+    // Theme-boundary check: only fade when crossing dark<->light.
+    if (thisIsDark === isDark(dest.pathname)) return; // same theme: normal nav, no fade
+    e.preventDefault();
+    overlay.classList.remove('is-ready');
+    overlay.classList.add('is-leaving');
+    setTimeout(function () { window.location.href = a.href; }, 210);
+  });
+
+  window.addEventListener('pageshow', function () {
+    overlay.classList.remove('is-leaving');
+    overlay.classList.add('is-ready');
+  });
+})();
+</script>
+
+</body>
+</html>

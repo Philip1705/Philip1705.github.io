@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Colvesta — Contact</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="description" content="Get in touch with the Colvesta team — partnerships, press, support, and collector inquiries." />
+<meta name="theme-color" content="#0D0B08" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Colvesta" />
+<meta property="og:title" content="Contact Colvesta" />
+<meta property="og:description" content="Get in touch with the Colvesta team — partnerships, press, support, and collector inquiries." />
+<meta property="og:url" content="https://colvesta.com/contact" />
+<meta property="og:image" content="https://colvesta.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Colvesta — The collector's ledger" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact Colvesta" />
+<meta name="twitter:description" content="Get in touch with the Colvesta team — partnerships, press, support, and collector inquiries." />
+<meta name="twitter:image" content="https://colvesta.com/assets/og-image.png" />
+
+<link rel="canonical" href="https://colvesta.com/contact" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   COLVESTA — Contact (two column form)
+   ============================================================ */
+:root {
+  --obsidian:        #0D0B08;
+  --ivory:           #F5F0E8;
+  --ivory-warm:      #EDE6D8;
+  --paper:           #FFFFFF;
+  --gold:            #C9A84C;
+  --gold-dark:       #A07C2A;
+  --gold-light:      #E2C97E;
+  --rule:            rgba(13,11,8,0.10);
+  --rule-strong:     rgba(13,11,8,0.18);
+  --rule-gold:       rgba(201,168,76,0.35);
+  --muted:           #6B6457;
+  --muted-2:         #8A8474;
+
+  --font-display:    'Cormorant Garamond','Garamond','Georgia',serif;
+  --font-body:       'DM Sans','Helvetica Neue',sans-serif;
+  --font-mono:       'JetBrains Mono','Menlo',monospace;
+
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+
+  --nav-h:           76px;
+  --max-w:           1280px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+html, body {
+  background: var(--ivory);
+  color: var(--obsidian);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--gold); color: var(--obsidian); }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+.wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  height: var(--nav-h);
+  background: rgba(245,240,232,0.82);
+  backdrop-filter: saturate(140%) blur(18px);
+  -webkit-backdrop-filter: saturate(140%) blur(18px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.brand {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-body); font-weight: 500; font-size: 15px;
+  letter-spacing: -0.01em; color: var(--obsidian);
+}
+.brand svg { width: 30px; height: 30px; display: block; }
+.back {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500;
+  color: var(--obsidian);
+  transition: color 200ms var(--ease-out);
+}
+.back .arrow { transition: transform 250ms var(--ease-out); display: inline-block; }
+.back:hover { color: var(--gold-dark); }
+.back:hover .arrow { transform: translateX(-4px); }
+
+/* PAGE */
+.page {
+  padding-top: calc(var(--nav-h) + 96px);
+  padding-bottom: 120px;
+}
+
+/* Two-column layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 96px;
+  align-items: start;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* LEFT — intro column */
+.intro { position: sticky; top: calc(var(--nav-h) + 56px); }
+.intro .eyebrow {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold-dark); margin-bottom: 28px;
+}
+.intro .eyebrow .dash { display: inline-block; width: 36px; height: 1px; background: var(--gold); }
+.intro h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(52px, 6.4vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -0.024em;
+  color: var(--obsidian);
+  margin-bottom: 32px;
+}
+.intro h1 em { font-style: italic; color: var(--gold-dark); font-weight: 500; }
+.intro .lede {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--obsidian);
+  max-width: 36ch;
+  margin-bottom: 36px;
+  text-wrap: pretty;
+}
+.intro .meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex; align-items: center; gap: 12px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+  max-width: 320px;
+}
+.intro .meta .dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--gold);
+  animation: glow 2.4s var(--ease-out) infinite;
+}
+@keyframes glow {
+  0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.6); }
+  70%  { box-shadow: 0 0 0 10px rgba(201,168,76,0); }
+  100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+}
+
+/* RIGHT — form */
+.form-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 44px 44px 40px;
+  box-shadow: 0 24px 60px rgba(13,11,8,0.04);
+}
+.form-card .form-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 8px;
+}
+.form-card .form-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  color: var(--obsidian);
+  margin-bottom: 32px;
+}
+
+.field {
+  display: flex; flex-direction: column;
+  margin-bottom: 22px;
+}
+.field label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.field label .req { color: var(--gold-dark); margin-left: 2px; }
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--obsidian);
+  background: var(--ivory);
+  border: 1px solid var(--rule-strong);
+  border-radius: 8px;
+  padding: 13px 16px;
+  outline: 0;
+  transition: border-color 180ms var(--ease-out), background 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--muted-2); }
+.field input:hover,
+.field select:hover,
+.field textarea:hover { border-color: var(--obsidian); }
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--gold);
+  background: var(--paper);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.18);
+}
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M4 6l4 4 4-4' stroke='%23A07C2A' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+.field textarea { resize: vertical; min-height: 130px; }
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+.field-row .field { margin-bottom: 0; }
+
+/* SUBMIT — gold pill from main landing page */
+.btn-pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--gold);
+  color: var(--obsidian);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 30px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 0;
+  transition: background 200ms var(--ease-out), transform 200ms var(--ease-out), box-shadow 300ms var(--ease-out);
+  white-space: nowrap;
+  margin-top: 8px;
+}
+.btn-pill:hover { background: var(--gold-light); box-shadow: 0 6px 24px rgba(201,168,76,0.28); }
+.btn-pill:active { background: var(--gold-dark); transform: scale(0.98); }
+.btn-pill:disabled { opacity: 0.65; cursor: wait; transform: none; box-shadow: none; }
+.btn-pill:disabled:hover { background: var(--gold); box-shadow: none; }
+
+/* Inline error message under the submit button */
+.form-error {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: rgba(194,91,78,0.08);
+  border: 1px solid rgba(194,91,78,0.28);
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #9A4234;
+  display: none;
+}
+.form-error.is-visible { display: block; animation: fadeUp 350ms var(--ease-out) both; }
+.form-error a {
+  color: #9A4234;
+  border-bottom: 1px solid rgba(154,66,52,0.45);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  transition: color 180ms var(--ease-out), border-color 180ms var(--ease-out);
+}
+.form-error a:hover { color: var(--obsidian); border-bottom-color: var(--obsidian); }
+
+/* Success state — replaces the form in place */
+.form-success {
+  display: none;
+  flex-direction: column; align-items: center;
+  text-align: center;
+  padding: 20px 8px 8px;
+}
+.form-success:not([hidden]) {
+  display: flex;
+  animation: fadeUp 500ms var(--ease-out) both;
+}
+.fs-check {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: rgba(201,168,76,0.06);
+  color: var(--gold-dark);
+  display: grid; place-items: center;
+  box-shadow: 0 0 0 6px rgba(201,168,76,0.06);
+  margin-bottom: 28px;
+}
+.fs-check svg { width: 28px; height: 28px; }
+.fs-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: -0.018em;
+  line-height: 1.1;
+  color: var(--obsidian);
+  margin-bottom: 10px;
+}
+.fs-sub {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 32ch;
+  margin-bottom: 24px;
+}
+.fs-sep {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+.fs-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--gold-dark);
+  border-bottom: 1px solid rgba(201,168,76,0.4);
+  padding-bottom: 2px;
+  transition: color 200ms var(--ease-out), border-color 200ms var(--ease-out), transform 250ms var(--ease-out);
+}
+.fs-link:hover { color: var(--obsidian); border-bottom-color: var(--obsidian); }
+.fs-link .fs-arrow { transition: transform 300ms var(--ease-out); }
+.fs-link:hover .fs-arrow { transform: translateY(3px); }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fineprint {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  text-align: left;
+}
+
+/* Email fallback */
+.email-fallback {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule-gold);
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: 6px 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.email-fallback .label {
+  font-family: var(--font-body);
+}
+.email-fallback a {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--gold-dark);
+  border-bottom: 1px solid rgba(201,168,76,0.4);
+  transition: color 180ms var(--ease-out), border-color 180ms var(--ease-out);
+}
+.email-fallback a:hover {
+  color: var(--obsidian);
+  border-bottom-color: var(--obsidian);
+}
+
+/* CROSS + FOOT */
+.cross {
+  max-width: 1180px;
+  margin: 96px auto 0;
+  padding-top: 56px;
+  border-top: 1px solid var(--rule-gold);
+}
+.cross-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.cross-card {
+  display: block;
+  padding: 32px 28px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  transition: transform 250ms var(--ease-out), border-color 250ms var(--ease-out), box-shadow 250ms var(--ease-out);
+}
+.cross-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 32px rgba(13,11,8,0.06);
+}
+.cross-card .cap {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold-dark); margin-bottom: 12px;
+}
+.cross-card .ttl {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 24px; letter-spacing: -0.01em; color: var(--obsidian);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.cross-card .ttl .arrow {
+  font-family: var(--font-body); font-size: 18px; color: var(--gold-dark);
+  transition: transform 250ms var(--ease-out);
+}
+.cross-card:hover .ttl .arrow { transform: translateX(6px); }
+
+.foot-social {
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.foot-social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #F5F0E8; opacity: 0.5;
+  transition: opacity 200ms var(--ease-out);
+}
+.foot-social a:hover { opacity: 1; }
+.foot-social svg { display: block; width: 18px; height: 18px; }
+.foot {
+  max-width: 1180px;
+  margin: 80px auto 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+  font-size: 12px; color: var(--muted);
+}
+.foot .mono { font-family: var(--font-mono); letter-spacing: 0.04em; }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 56px; }
+  .intro { position: static; }
+}
+@media (max-width: 720px) {
+  .wrap { padding: 0 22px; }
+  .page { padding-top: calc(var(--nav-h) + 56px); padding-bottom: 80px; }
+  .form-card { padding: 28px 24px 24px; }
+  .field-row { grid-template-columns: 1fr; gap: 22px; margin-bottom: 0; }
+  .field-row .field { margin-bottom: 22px; }
+  .cross-grid { grid-template-columns: 1fr; }
+  .foot { flex-direction: column; gap: 10px; }
+}
+@media (max-width: 560px) {
+  .back span:not(.arrow) { display: none; }
+  .back::after { content: "Home"; letter-spacing: 0.08em; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="Whitelist Landing Page.html" aria-label="Colvesta home">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M60,16 C60,9.373 54.627,4 48,4 L16,4 C9.373,4 4,9.373 4,16 L4,48 C4,54.627 9.373,60 16,60 L48,60 C54.627,60 60,54.627 60,48 L60,42 L48,42 C48,47.523 44.418,52 38,52 L26,52 C18.268,52 12,45.732 12,38 L12,26 C12,18.268 18.268,12 26,12 L38,12 C44.418,12 48,16.477 48,22 L60,22 Z" fill="#C9A84C"/>
+      </svg>
+      <span>Colvesta</span>
+    </a>
+    <a class="back" href="Whitelist Landing Page.html">
+      <span class="arrow">←</span><span>Back to Home</span>
+    </a>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap">
+
+    <div class="contact-grid">
+
+      <!-- LEFT — Intro -->
+      <aside class="intro">
+        <div class="eyebrow reveal"><span class="dash"></span>Get in touch</div>
+        <h1 class="reveal">We read <em>every</em> message.</h1>
+        <p class="lede reveal">Whether you have a question, found an issue, or just want to say hello — reach out. We'll get back to you within 48 hours.</p>
+        <div class="meta reveal">
+          <span class="dot"></span>
+          <span>Replies within 48 hours</span>
+        </div>
+      </aside>
+
+      <!-- RIGHT — Form -->
+      <section class="form-card reveal">
+        <div class="form-eyebrow">Send a message</div>
+        <div class="form-title">Tell us what's on your mind.</div>
+
+        <form id="contact-form" action="https://formspree.io/f/mbdbzpld" method="POST">
+
+          <div class="field">
+            <label for="name">Full name<span class="req">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email address<span class="req">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject<span class="req">*</span></label>
+            <select id="subject" name="subject" required>
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Bug Report">Bug Report</option>
+              <option value="Press">Press</option>
+              <option value="Partnership">Partnership</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message<span class="req">*</span></label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us a bit more…" required></textarea>
+          </div>
+
+          <button class="btn-pill" type="submit" id="contact-submit">Send Message →</button>
+          <div class="form-error" id="contact-error" role="alert" aria-live="polite"></div>
+          <div class="fineprint">No marketing. No noise. Just a reply from a real person.</div>
+        </form>
+
+        <!-- Success state — swapped in after a successful submission -->
+        <div class="form-success" id="contact-success" role="status" aria-live="polite" hidden>
+          <div class="fs-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="fs-title">Message received.</div>
+          <div class="fs-sub">We'll get back to you within 48 hours.</div>
+          <div class="fs-sep" aria-hidden="true"></div>
+          <a class="fs-link" href="Whitelist Landing Page.html">In the meantime, explore Colvesta <span class="fs-arrow">↓</span></a>
+        </div>
+
+        <div class="email-fallback">
+          <span class="label">Prefer email? Reach us directly at</span>
+          <a href="mailto:support@colvesta.com">support@colvesta.com</a>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="cross">
+      <div class="cross-grid">
+        <a class="cross-card" href="about.html">
+          <div class="cap">The story</div>
+          <div class="ttl"><span>About Colvesta</span><span class="arrow">→</span></div>
+        </a>
+        <a class="cross-card" href="journal.html">
+          <div class="cap">Read on</div>
+          <div class="ttl"><span>Journal</span><span class="arrow">→</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="foot">
+      <span>© 2026 Colvesta, Inc. · Made with quiet attention.</span>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/colvesta.app/" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://x.com/Colvesta_app" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.53 3h2.97l-6.49 7.41L21.75 21h-6.02l-4.71-6.16L5.6 21H2.62l6.94-7.93L2.25 3h6.17l4.26 5.63L17.53 3zm-1.06 16.2h1.66L7.62 4.7H5.84l10.63 14.5z"/></svg>
+        </a>
+      </div>
+      <span class="mono">Contact · v 1.0</span>
+    </div>
+
+  </div>
+</main>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ============================================================
+   CONTACT FORM — AJAX submission to Formspree
+   ============================================================ */
+(() => {
+  const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('contact-submit');
+  const errorEl = document.getElementById('contact-error');
+  const successEl = document.getElementById('contact-success');
+  if (!form || !submitBtn) return;
+
+  const ORIGINAL_LABEL = submitBtn.textContent;
+  const ERROR_HTML = 'Something went wrong. Please try again or email us directly at <a href="mailto:support@colvesta.com">support@colvesta.com</a>';
+
+  function setLoading(loading) {
+    submitBtn.disabled = loading;
+    submitBtn.textContent = loading ? 'Sending…' : ORIGINAL_LABEL;
+  }
+
+  function showError() {
+    errorEl.innerHTML = ERROR_HTML;
+    errorEl.classList.add('is-visible');
+  }
+
+  function clearError() {
+    errorEl.classList.remove('is-visible');
+    errorEl.innerHTML = '';
+  }
+
+  function showSuccess() {
+    form.hidden = true;
+    form.style.display = 'none';
+    // Also hide the email-fallback block so the success state is the
+    // only thing in the card.
+    const fallback = document.querySelector('.form-card .email-fallback');
+    if (fallback) fallback.style.display = 'none';
+    successEl.hidden = false;
+  }
+
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    clearError();
+    setLoading(true);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      });
+
+      if (res.ok) {
+        showSuccess();
+      } else {
+        setLoading(false);
+        showError();
+      }
+    } catch (err) {
+      setLoading(false);
+      showError();
+    }
+  });
+})();
+</script>
+
+
+<!-- Page-fade transition: dark bridge between landing and interior pages -->
+<style>
+  .page-fade {
+    position: fixed; inset: 0;
+    background: #000;
+    z-index: 99999;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 200ms ease-out;
+  }
+  .page-fade.is-ready { opacity: 0; }
+  .page-fade.is-leaving { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .page-fade { transition: none; opacity: 0 !important; }
+  }
+</style>
+<script>
+(function () {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+  // Theme detection — landing page = dark, all others = light.
+  var landingFile = 'whitelist landing page.html';
+  function isDark(pathname) {
+    try { return decodeURIComponent(pathname).toLowerCase().endsWith(landingFile); }
+    catch (_) { return false; }
+  }
+  var thisIsDark = isDark(location.pathname);
+
+  // Should we fade IN on load? Only if the previous page was on the other theme.
+  var shouldFadeIn = false;
+  if (document.referrer) {
+    try {
+      var ref = new URL(document.referrer);
+      if (ref.origin === location.origin && isDark(ref.pathname) !== thisIsDark) {
+        shouldFadeIn = true;
+      }
+    } catch (_) {}
+  }
+
+  var overlay = document.createElement('div');
+  overlay.className = 'page-fade';
+  overlay.setAttribute('aria-hidden', 'true');
+  if (!shouldFadeIn) overlay.classList.add('is-ready'); // append already hidden — no flash
+  document.body.appendChild(overlay);
+  if (shouldFadeIn) {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { overlay.classList.add('is-ready'); });
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href) return;
+    if (a.target && a.target !== '' && a.target !== '_self') return;
+    if (a.hasAttribute('download')) return;
+    if (e.button !== 0) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (e.defaultPrevented) return;
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) return;
+    if (href.charAt(0) === '#') return;
+    var dest;
+    try { dest = new URL(a.href, location.href); }
+    catch (_) { return; }
+    if (dest.origin !== location.origin) return;
+    // Same path, only hash change -> let browser handle it (in-page jump)
+    if (dest.pathname === location.pathname && dest.search === location.search && dest.hash && dest.hash !== location.hash) return;
+    // Theme-boundary check: only fade when crossing dark<->light.
+    if (thisIsDark === isDark(dest.pathname)) return; // same theme: normal nav, no fade
+    e.preventDefault();
+    overlay.classList.remove('is-ready');
+    overlay.classList.add('is-leaving');
+    setTimeout(function () { window.location.href = a.href; }, 210);
+  });
+
+  window.addEventListener('pageshow', function () {
+    overlay.classList.remove('is-leaving');
+    overlay.classList.add('is-ready');
+  });
+})();
+</script>
+
+</body>
+</html>

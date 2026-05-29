@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Colvesta — Security</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="description" content="How we protect your account, your collection data, and your peace of mind." />
+<meta name="theme-color" content="#0D0B08" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Colvesta" />
+<meta property="og:title" content="Colvesta — Security" />
+<meta property="og:description" content="How we protect your account, your collection data, and your peace of mind." />
+<meta property="og:url" content="https://colvesta.com/security" />
+<meta property="og:image" content="https://colvesta.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Colvesta — The collector's ledger" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Colvesta — Security" />
+<meta name="twitter:description" content="How we protect your account, your collection data, and your peace of mind." />
+<meta name="twitter:image" content="https://colvesta.com/assets/og-image.png" />
+
+<link rel="canonical" href="https://colvesta.com/security" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   COLVESTA — Legal page (Security)
+   Warm ivory / obsidian. Editorial.
+   ============================================================ */
+:root {
+  --obsidian:        #0D0B08;
+  --obsidian-soft:   #1E1A14;
+  --ivory:           #F5F0E8;
+  --ivory-warm:      #EDE6D8;
+  --paper:           #FFFFFF;
+  --gold:            #C9A84C;
+  --gold-dark:       #A07C2A;
+  --gold-light:      #E2C97E;
+  --rule:            rgba(13,11,8,0.10);
+  --rule-gold:       rgba(201,168,76,0.35);
+  --muted:           #6B6457;
+  --muted-2:         #8A8474;
+
+  --font-display:    'Cormorant Garamond','Garamond','Georgia',serif;
+  --font-body:       'DM Sans','Helvetica Neue',sans-serif;
+  --font-mono:       'JetBrains Mono','Menlo',monospace;
+
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+
+  --nav-h:           76px;
+  --max-w:           1280px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+
+html, body {
+  background: var(--ivory);
+  color: var(--obsidian);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--gold); color: var(--obsidian); }
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+.wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  background: rgba(245,240,232,0.82);
+  backdrop-filter: saturate(140%) blur(18px);
+  -webkit-backdrop-filter: saturate(140%) blur(18px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-inner {
+  height: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-body); font-weight: 500; font-size: 15px;
+  letter-spacing: -0.01em;
+  color: var(--obsidian);
+}
+.brand svg { width: 30px; height: 30px; display: block; }
+.back {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--obsidian);
+  transition: color 200ms var(--ease-out);
+}
+.back .arrow { transition: transform 250ms var(--ease-out); display: inline-block; }
+.back:hover { color: var(--gold-dark); }
+.back:hover .arrow { transform: translateX(-4px); }
+
+/* ============================================================
+   PAGE LAYOUT
+   ============================================================ */
+.page {
+  padding-top: calc(var(--nav-h) + 96px);
+  padding-bottom: 120px;
+}
+
+.page-head {
+  margin-bottom: 88px;
+  max-width: 880px;
+}
+.page-eyebrow {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 28px;
+}
+.page-eyebrow .dash {
+  display: inline-block;
+  width: 36px; height: 1px;
+  background: var(--gold);
+}
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(64px, 9vw, 112px);
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+  color: var(--obsidian);
+  margin-bottom: 32px;
+}
+.page-title em { font-style: italic; color: var(--gold-dark); font-weight: 500; }
+.page-meta {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding: 10px 16px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--paper);
+}
+.page-meta .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold);
+}
+
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--rule-gold) 30%, transparent 100%);
+  margin: 0 0 80px;
+}
+
+/* ============================================================
+   2-COLUMN LAYOUT
+   ============================================================ */
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 96px;
+  align-items: start;
+}
+
+/* ============================================================
+   SIDEBAR — TABLE OF CONTENTS
+   ============================================================ */
+.toc {
+  position: sticky;
+  top: calc(var(--nav-h) + 56px);
+}
+.toc-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--rule);
+}
+.toc-list {
+  list-style: none;
+  display: flex; flex-direction: column;
+  gap: 2px;
+}
+.toc-list a {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  align-items: baseline;
+  gap: 8px;
+  padding: 9px 0 9px 14px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--muted);
+  border-left: 1.5px solid transparent;
+  transition: color 200ms var(--ease-out), border-color 200ms var(--ease-out), padding 200ms var(--ease-out);
+}
+.toc-list a .toc-num {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted-2);
+  transition: color 200ms var(--ease-out);
+}
+.toc-list a:hover {
+  color: var(--obsidian);
+}
+.toc-list a:hover .toc-num { color: var(--gold-dark); }
+.toc-list a.active {
+  color: var(--gold-dark);
+  border-left-color: var(--gold);
+  padding-left: 18px;
+}
+.toc-list a.active .toc-num { color: var(--gold-dark); }
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+.content {
+  max-width: 720px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--obsidian);
+}
+
+.section {
+  padding-top: 8px;
+  padding-bottom: 64px;
+  margin-bottom: 64px;
+  border-bottom: 1px solid var(--rule-gold);
+  scroll-margin-top: 100px;
+}
+.section:last-of-type {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+.section .eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 18px;
+}
+.section .eyebrow .marker {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+}
+.section h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(34px, 4.2vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.018em;
+  color: var(--obsidian);
+  margin-bottom: 28px;
+}
+
+.section h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: var(--obsidian);
+  margin: 28px 0 10px;
+}
+.section h3 .sub-num {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--gold-dark);
+  margin-right: 10px;
+}
+
+.section p { margin-bottom: 18px; color: var(--obsidian); }
+.section p:last-child { margin-bottom: 0; }
+
+.section ul {
+  list-style: none;
+  margin: 12px 0 22px;
+  padding: 0;
+  display: flex; flex-direction: column;
+  gap: 10px;
+}
+.section ul li {
+  position: relative;
+  padding-left: 26px;
+}
+.section ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px; top: 0.78em;
+  width: 8px; height: 1px;
+  background: var(--gold);
+}
+.section ul li strong {
+  font-weight: 600;
+  color: var(--obsidian);
+}
+
+.section a.inline {
+  color: var(--gold-dark);
+  border-bottom: 1px solid rgba(201,168,76,0.4);
+  transition: color 180ms var(--ease-out), border-color 180ms var(--ease-out);
+}
+.section a.inline:hover {
+  color: var(--obsidian);
+  border-bottom-color: var(--obsidian);
+}
+
+.section .mono { font-family: var(--font-mono); font-size: 0.94em; }
+
+/* Contact card */
+.contact-card {
+  margin-top: 18px;
+  padding: 24px 28px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--gold);
+  border-radius: 4px;
+  font-family: var(--font-body);
+}
+.contact-card .label {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.contact-card .name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--obsidian);
+  margin-bottom: 2px;
+}
+.contact-card .email {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--gold-dark);
+}
+
+/* ============================================================
+   CROSS-LINK FOOTER
+   ============================================================ */
+.cross {
+  margin-top: 96px;
+  padding-top: 56px;
+  border-top: 1px solid var(--rule-gold);
+}
+.cross-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.cross-card {
+  display: block;
+  padding: 36px 32px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  transition: transform 250ms var(--ease-out), border-color 250ms var(--ease-out), box-shadow 250ms var(--ease-out);
+}
+.cross-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 32px rgba(13,11,8,0.06);
+}
+.cross-card .cap {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 14px;
+}
+.cross-card .ttl {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  color: var(--obsidian);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+}
+.cross-card .ttl .arrow {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--gold-dark);
+  transition: transform 250ms var(--ease-out);
+}
+.cross-card:hover .ttl .arrow { transform: translateX(6px); }
+
+/* Page footer mini */
+.foot-social {
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.foot-social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #F5F0E8; opacity: 0.5;
+  transition: opacity 200ms var(--ease-out);
+}
+.foot-social a:hover { opacity: 1; }
+.foot-social svg { display: block; width: 18px; height: 18px; }
+.foot {
+  margin-top: 80px;
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+  font-size: 12px;
+  color: var(--muted);
+  font-family: var(--font-body);
+}
+.foot .mono { font-family: var(--font-mono); letter-spacing: 0.04em; }
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+.toc-mobile { display: none; }
+
+@media (max-width: 960px) {
+  .wrap { padding: 0 24px; }
+  .page { padding-top: calc(var(--nav-h) + 56px); }
+  .page-head { margin-bottom: 56px; }
+  .rule { margin-bottom: 40px; }
+  .layout { grid-template-columns: 1fr; gap: 0; }
+  .toc { display: none; }
+  .toc-mobile {
+    display: block;
+    margin-bottom: 56px;
+    padding: 20px 22px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+  }
+  .toc-mobile summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .toc-mobile summary::-webkit-details-marker { display: none; }
+  .toc-mobile summary::after {
+    content: "+";
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .toc-mobile[open] summary::after { content: "−"; }
+  .toc-mobile .toc-list {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+  }
+  .cross-grid { grid-template-columns: 1fr; }
+  .foot { flex-direction: column; gap: 10px; }
+  .content { font-size: 16px; }
+}
+
+@media (max-width: 560px) {
+  .wrap { padding: 0 20px; }
+  .page-title { font-size: clamp(48px, 13vw, 72px); }
+  .section h2 { font-size: 30px; }
+  .back span:not(.arrow) { display: none; }
+  .back::after { content: "Home"; letter-spacing: 0.08em; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="Whitelist Landing Page.html" aria-label="Colvesta home">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M60,16 C60,9.373 54.627,4 48,4 L16,4 C9.373,4 4,9.373 4,16 L4,48 C4,54.627 9.373,60 16,60 L48,60 C54.627,60 60,54.627 60,48 L60,42 L48,42 C48,47.523 44.418,52 38,52 L26,52 C18.268,52 12,45.732 12,38 L12,26 C12,18.268 18.268,12 26,12 L38,12 C44.418,12 48,16.477 48,22 L60,22 Z" fill="#C9A84C"/>
+      </svg>
+      <span>Colvesta</span>
+    </a>
+    <a class="back" href="Whitelist Landing Page.html">
+      <span class="arrow">←</span><span>Back to Home</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     PAGE
+     ============================================================ -->
+<main class="page">
+  <div class="wrap">
+
+    <header class="page-head">
+      <div class="page-eyebrow"><span class="dash"></span>Legal · The fine print</div>
+      <h1 class="page-title"><em>Security</em></h1>
+      <div class="page-meta">
+        <span class="dot"></span>
+        <span>Last updated · May 9, 2026</span>
+      </div>
+    </header>
+
+    <div class="rule"></div>
+
+    <div class="layout">
+
+      <!-- ============================================================
+           TOC — DESKTOP
+           ============================================================ -->
+      <aside class="toc" aria-label="Table of contents">
+        <div class="toc-label">Contents</div>
+        <ul class="toc-list" id="toc-list">
+          <li><a href="#s01"><span class="toc-num">01</span><span>Our Commitment to Security</span></a></li>
+          <li><a href="#s02"><span class="toc-num">02</span><span>Account Security</span></a></li>
+          <li><a href="#s03"><span class="toc-num">03</span><span>Data Protection</span></a></li>
+          <li><a href="#s04"><span class="toc-num">04</span><span>Infrastructure</span></a></li>
+          <li><a href="#s05"><span class="toc-num">05</span><span>Application Security</span></a></li>
+          <li><a href="#s06"><span class="toc-num">06</span><span>Vulnerability Disclosure</span></a></li>
+          <li><a href="#s07"><span class="toc-num">07</span><span>Data Breach Response</span></a></li>
+          <li><a href="#s08"><span class="toc-num">08</span><span>Limitations</span></a></li>
+          <li><a href="#s09"><span class="toc-num">09</span><span>Changes to This Page</span></a></li>
+          <li><a href="#s10"><span class="toc-num">10</span><span>Contact</span></a></li>
+        </ul>
+      </aside>
+
+      <!-- ============================================================
+           CONTENT
+           ============================================================ -->
+      <article class="content">
+
+        <details class="toc-mobile">
+          <summary>Contents · 10 sections</summary>
+          <ul class="toc-list">
+            <li><a href="#s01"><span class="toc-num">01</span><span>Our Commitment to Security</span></a></li>
+            <li><a href="#s02"><span class="toc-num">02</span><span>Account Security</span></a></li>
+            <li><a href="#s03"><span class="toc-num">03</span><span>Data Protection</span></a></li>
+            <li><a href="#s04"><span class="toc-num">04</span><span>Infrastructure</span></a></li>
+            <li><a href="#s05"><span class="toc-num">05</span><span>Application Security</span></a></li>
+            <li><a href="#s06"><span class="toc-num">06</span><span>Vulnerability Disclosure</span></a></li>
+            <li><a href="#s07"><span class="toc-num">07</span><span>Data Breach Response</span></a></li>
+            <li><a href="#s08"><span class="toc-num">08</span><span>Limitations</span></a></li>
+            <li><a href="#s09"><span class="toc-num">09</span><span>Changes to This Page</span></a></li>
+            <li><a href="#s10"><span class="toc-num">10</span><span>Contact</span></a></li>
+          </ul>
+        </details>
+
+        <section class="section" id="s01">
+          <div class="eyebrow"><span class="marker">§</span>01</div>
+          <h2>Our Commitment to Security</h2>
+          <p>At Colvesta, the security of your data is a core responsibility — not an afterthought. We design our systems with security in mind from the ground up, and we continuously work to protect the personal information and collection data you entrust to us.</p>
+          <p>This page describes the technical and organizational measures we take to keep your account and data safe.</p>
+        </section>
+
+        <section class="section" id="s02">
+          <div class="eyebrow"><span class="marker">§</span>02</div>
+          <h2>Account Security</h2>
+
+          <h3>Authentication</h3>
+          <p>Colvesta does not store passwords. All authentication is handled through trusted third-party providers — Google Sign-In and Apple Sign In — which use industry-standard OAuth 2.0 protocols. Your credentials never pass through or are stored on Colvesta's servers.</p>
+
+          <h3>Session Management</h3>
+          <p>Active sessions are managed with short-lived, signed tokens. If suspicious activity is detected on your account, sessions may be invalidated automatically.</p>
+
+          <h3>What you can do</h3>
+          <p>The security of your account also depends on the strength of your Google or Apple account. We strongly recommend enabling two-factor authentication on whichever provider you use to sign in to Colvesta.</p>
+        </section>
+
+        <section class="section" id="s03">
+          <div class="eyebrow"><span class="marker">§</span>03</div>
+          <h2>Data Protection</h2>
+
+          <h3>Encryption in transit</h3>
+          <p>All data transmitted between the Colvesta app and our servers is encrypted using TLS (Transport Layer Security). This applies to every request — from loading your collection to uploading images.</p>
+
+          <h3>Encryption at rest</h3>
+          <p>Personal data and collection content stored in our databases is encrypted at rest. Images and media files are stored in access-controlled cloud storage with encryption enabled by default.</p>
+
+          <h3>Payment data</h3>
+          <p>Colvesta does not process, store, or have access to any payment or billing information. All Pro tier subscriptions are handled entirely by Apple (App Store). Payment data is governed by Apple's security standards, which include PCI DSS compliance.</p>
+        </section>
+
+        <section class="section" id="s04">
+          <div class="eyebrow"><span class="marker">§</span>04</div>
+          <h2>Infrastructure</h2>
+          <p>Colvesta is hosted on reputable, enterprise-grade cloud infrastructure. Our infrastructure providers maintain their own comprehensive security programs, including physical security, network isolation, and compliance certifications.</p>
+          <p>We use Supabase Edge Functions for server-side logic and market data caching, designed to minimize the exposure of sensitive operations to the client layer.</p>
+          <p>Access to production systems is restricted to authorized personnel only, using role-based access controls and audit logging.</p>
+        </section>
+
+        <section class="section" id="s05">
+          <div class="eyebrow"><span class="marker">§</span>05</div>
+          <h2>Application Security</h2>
+          <p>We follow secure development practices throughout our engineering process, including:</p>
+          <ul>
+            <li>Input validation and sanitization to prevent injection attacks</li>
+            <li>Rate limiting on API endpoints to reduce abuse and brute-force risks</li>
+            <li>Dependency monitoring to identify and patch known vulnerabilities in third-party libraries</li>
+            <li>Regular review of authentication flows and data access patterns</li>
+          </ul>
+          <p>As Colvesta is an iOS-native application, we also adhere to Apple's App Store security guidelines and leverage platform-level security features including secure enclave and app sandboxing where applicable.</p>
+        </section>
+
+        <section class="section" id="s06">
+          <div class="eyebrow"><span class="marker">§</span>06</div>
+          <h2>Vulnerability Disclosure</h2>
+          <p>We take security reports seriously. If you believe you have discovered a security vulnerability in Colvesta, we ask that you disclose it to us responsibly before making it public.</p>
+          <p>Please report security concerns to: <a class="inline" href="mailto:support@colvesta.com">support@colvesta.com</a></p>
+          <p>Include as much detail as possible — steps to reproduce, potential impact, and any relevant screenshots or logs. We will acknowledge your report within 72 hours and work to resolve confirmed vulnerabilities promptly.</p>
+          <p>We ask that you do not access, modify, or delete any data that is not your own during your research, and that you give us reasonable time to address the issue before public disclosure.</p>
+        </section>
+
+        <section class="section" id="s07">
+          <div class="eyebrow"><span class="marker">§</span>07</div>
+          <h2>Data Breach Response</h2>
+          <p>In the unlikely event of a data breach that affects your personal information, we will:</p>
+          <ul>
+            <li>Investigate and contain the incident as quickly as possible</li>
+            <li>Notify affected users within a reasonable timeframe, in accordance with applicable law</li>
+            <li>Take corrective action to prevent recurrence</li>
+            <li>Cooperate with relevant authorities as required</li>
+          </ul>
+        </section>
+
+        <section class="section" id="s08">
+          <div class="eyebrow"><span class="marker">§</span>08</div>
+          <h2>Limitations</h2>
+          <p>While we take security seriously and invest in strong protections, no system is completely immune to risk. We cannot guarantee that unauthorized access, data loss, or disclosure will never occur. We encourage you to take steps to protect your own account, including keeping your authentication provider credentials secure and reporting any suspicious activity promptly.</p>
+        </section>
+
+        <section class="section" id="s09">
+          <div class="eyebrow"><span class="marker">§</span>09</div>
+          <h2>Changes to This Page</h2>
+          <p>We may update this Security page as our practices evolve. When we do, we will revise the "Last updated" date at the top. Significant changes will be communicated through the app or via email.</p>
+        </section>
+
+        <section class="section" id="s10">
+          <div class="eyebrow"><span class="marker">§</span>10</div>
+          <h2>Contact</h2>
+          <p>For any security-related questions or to report a vulnerability, contact us at:</p>
+          <div class="contact-card">
+            <div class="label">Get in touch</div>
+            <div class="name">Colvesta</div>
+            <a class="email" href="mailto:support@colvesta.com">support@colvesta.com</a>
+          </div>
+        </section>
+
+        <!-- ============================================================
+             CROSS-LINKS
+             ============================================================ -->
+        <div class="cross">
+          <div class="cross-grid">
+            <a class="cross-card" href="privacy.html">
+              <div class="cap">Also read</div>
+              <div class="ttl"><span>Privacy Policy</span><span class="arrow">→</span></div>
+            </a>
+            <a class="cross-card" href="terms.html">
+              <div class="cap">Also read</div>
+              <div class="ttl"><span>Terms of Service</span><span class="arrow">→</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="foot">
+          <span>© 2026 Colvesta, Inc. · Made with quiet attention.</span>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/colvesta.app/" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://x.com/Colvesta_app" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.53 3h2.97l-6.49 7.41L21.75 21h-6.02l-4.71-6.16L5.6 21H2.62l6.94-7.93L2.25 3h6.17l4.26 5.63L17.53 3zm-1.06 16.2h1.66L7.62 4.7H5.84l10.63 14.5z"/></svg>
+        </a>
+      </div>
+          <span class="mono">Security · v 1.0</span>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</main>
+
+<script>
+/* ============================================================
+   ACTIVE-SECTION TOC HIGHLIGHTING
+   ============================================================ */
+(function() {
+  const tocLinks = Array.from(document.querySelectorAll('.toc-list a'));
+  const sections = Array.from(document.querySelectorAll('.section[id]'));
+  if (!sections.length) return;
+
+  // Map id → all matching TOC anchors (desktop + mobile share ids)
+  const linksById = {};
+  tocLinks.forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    (linksById[id] = linksById[id] || []).push(a);
+  });
+
+  let currentId = null;
+  function setActive(id) {
+    if (id === currentId) return;
+    currentId = id;
+    tocLinks.forEach(a => a.classList.remove('active'));
+    (linksById[id] || []).forEach(a => a.classList.add('active'));
+  }
+
+  // Pick the section whose top is nearest the viewport top (with a small offset)
+  const OFFSET = 140;
+  function update() {
+    let best = sections[0];
+    let bestDist = Infinity;
+    for (const s of sections) {
+      const top = s.getBoundingClientRect().top;
+      // sections at or above the offset line, pick the closest one to it
+      if (top - OFFSET <= 0) {
+        const dist = Math.abs(top - OFFSET);
+        if (dist < bestDist) { bestDist = dist; best = s; }
+      }
+    }
+    // If user is above the first section, default to first
+    setActive(best.id);
+  }
+
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { update(); ticking = false; });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+})();
+</script>
+
+
+<!-- Page-fade transition: dark bridge between landing and interior pages -->
+<style>
+  .page-fade {
+    position: fixed; inset: 0;
+    background: #000;
+    z-index: 99999;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 200ms ease-out;
+  }
+  .page-fade.is-ready { opacity: 0; }
+  .page-fade.is-leaving { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .page-fade { transition: none; opacity: 0 !important; }
+  }
+</style>
+<script>
+(function () {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+  // Theme detection — landing page = dark, all others = light.
+  var landingFile = 'whitelist landing page.html';
+  function isDark(pathname) {
+    try { return decodeURIComponent(pathname).toLowerCase().endsWith(landingFile); }
+    catch (_) { return false; }
+  }
+  var thisIsDark = isDark(location.pathname);
+
+  // Should we fade IN on load? Only if the previous page was on the other theme.
+  var shouldFadeIn = false;
+  if (document.referrer) {
+    try {
+      var ref = new URL(document.referrer);
+      if (ref.origin === location.origin && isDark(ref.pathname) !== thisIsDark) {
+        shouldFadeIn = true;
+      }
+    } catch (_) {}
+  }
+
+  var overlay = document.createElement('div');
+  overlay.className = 'page-fade';
+  overlay.setAttribute('aria-hidden', 'true');
+  if (!shouldFadeIn) overlay.classList.add('is-ready'); // append already hidden — no flash
+  document.body.appendChild(overlay);
+  if (shouldFadeIn) {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { overlay.classList.add('is-ready'); });
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href) return;
+    if (a.target && a.target !== '' && a.target !== '_self') return;
+    if (a.hasAttribute('download')) return;
+    if (e.button !== 0) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (e.defaultPrevented) return;
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) return;
+    if (href.charAt(0) === '#') return;
+    var dest;
+    try { dest = new URL(a.href, location.href); }
+    catch (_) { return; }
+    if (dest.origin !== location.origin) return;
+    // Same path, only hash change -> let browser handle it (in-page jump)
+    if (dest.pathname === location.pathname && dest.search === location.search && dest.hash && dest.hash !== location.hash) return;
+    // Theme-boundary check: only fade when crossing dark<->light.
+    if (thisIsDark === isDark(dest.pathname)) return; // same theme: normal nav, no fade
+    e.preventDefault();
+    overlay.classList.remove('is-ready');
+    overlay.classList.add('is-leaving');
+    setTimeout(function () { window.location.href = a.href; }, 210);
+  });
+
+  window.addEventListener('pageshow', function () {
+    overlay.classList.remove('is-leaving');
+    overlay.classList.add('is-ready');
+  });
+})();
+</script>
+
+</body>
+</html>

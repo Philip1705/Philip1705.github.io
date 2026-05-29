@@ -1,0 +1,2642 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Colvesta — Join the Whitelist</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="description" content="The private vault for serious collectors. Catalog every piece, track live market value, and showcase your collection inside a circle of people who actually get it. iOS, launching 2026." />
+<meta name="theme-color" content="#0D0B08" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Colvesta" />
+<meta property="og:title" content="Colvesta — The Collector's Ledger" />
+<meta property="og:description" content="The private vault for serious collectors. Catalog every piece, track live market value, and showcase your collection inside a circle of people who actually get it. iOS, launching 2026." />
+<meta property="og:url" content="https://colvesta.com/" />
+<meta property="og:image" content="https://colvesta.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Colvesta — The collector's ledger" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Colvesta — The Collector's Ledger" />
+<meta name="twitter:description" content="The private vault for serious collectors. Catalog every piece, track live market value, and showcase your collection inside a circle of people who actually get it. iOS, launching 2026." />
+<meta name="twitter:image" content="https://colvesta.com/assets/og-image.png" />
+
+<link rel="canonical" href="https://colvesta.com/" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<template id="__bundler_thumbnail" data-bg-color="#0D0B08">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0D0B08"/>
+    <path d="M780,300 C780,256 744,220 700,220 L500,220 C456,220 420,256 420,300 L420,500 C420,544 456,580 500,580 L700,580 C744,580 780,544 780,500 L780,460 L700,460 C700,492 678,520 644,520 L556,520 C516,520 484,488 484,448 L484,352 C484,312 516,280 556,280 L644,280 C678,280 700,308 700,340 L780,340 Z" fill="#C9A84C"/>
+  </svg>
+</template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   COLVESTA — Whitelist Landing
+   Dark luxury editorial. Warm obsidian + muted gold.
+   ============================================================ */
+:root {
+  --obsidian:        #0D0B08;        /* warm near-black */
+  --obsidian-90:     #15120D;
+  --obsidian-80:     #1E1A14;
+  --obsidian-70:     #2A2620;
+  --obsidian-60:     #3A342B;
+  --gold:            #C9A84C;
+  --gold-light:      #E2C97E;
+  --gold-dark:       #A07C2A;
+  --gold-soft:       rgba(201,168,76,0.12);
+  --ivory:           #F5F0E8;
+  --ivory-dim:       #C8BFA8;
+  --ivory-muted:     #8A8070;
+  --ivory-faint:     #5A524A;
+  --success:         #4A9C6F;
+  --error:           #C25B4E;
+
+  --font-display:    'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  --font-body:       'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-mono:       'JetBrains Mono', 'Menlo', monospace;
+
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:     cubic-bezier(0.45, 0, 0.55, 1);
+
+  --max-w:           1320px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--obsidian);
+  color: var(--ivory);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Subtle warm grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("assets/noise.svg");
+}
+
+::selection { background: var(--gold); color: var(--obsidian); }
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+img { display: block; max-width: 100%; }
+
+/* ============================================================
+   TYPE
+   ============================================================ */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.eyebrow .dash {
+  display: inline-block; width: 28px; height: 1px; background: var(--gold);
+  vertical-align: middle; margin-right: 12px; opacity: 0.7;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--ivory);
+}
+.display em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+.subhead {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ivory-dim);
+  font-weight: 400;
+  max-width: 52ch;
+  text-wrap: pretty;
+}
+
+.mono { font-family: var(--font-mono); }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section { position: relative; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  padding: 22px 0;
+  transition: background 350ms var(--ease-out), backdrop-filter 350ms var(--ease-out), border-color 350ms var(--ease-out), padding 350ms var(--ease-out);
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled {
+  background: rgba(13, 11, 8, 0.72);
+  backdrop-filter: saturate(140%) blur(18px);
+  -webkit-backdrop-filter: saturate(140%) blur(18px);
+  border-bottom-color: rgba(201,168,76,0.08);
+  padding: 14px 0;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--font-body); font-weight: 500; font-size: 15px;
+  letter-spacing: -0.01em;
+  color: var(--ivory);
+}
+.brand svg { width: 32px; height: 32px; display:block; }
+.nav-links {
+  display: flex; align-items: center; gap: 40px;
+  font-size: 14px;
+  color: var(--ivory-dim);
+}
+.nav-links a {
+  position: relative;
+  transition: color 200ms var(--ease-out);
+}
+.nav-links a:hover { color: var(--ivory); }
+.nav-links a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -6px;
+  height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: left;
+  transition: transform 300ms var(--ease-out);
+}
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* Pill button — the canonical Colvesta CTA */
+.btn-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--gold);
+  color: var(--obsidian);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  border-radius: 999px;
+  transition: background 200ms var(--ease-out), transform 200ms var(--ease-out), box-shadow 300ms var(--ease-out);
+  white-space: nowrap;
+}
+.btn-pill:hover { background: var(--gold-light); box-shadow: 0 6px 24px rgba(201,168,76,0.28); }
+.btn-pill:active { background: var(--gold-dark); transform: scale(0.98); }
+.btn-pill.lg { padding: 18px 34px; font-size: 14px; }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: rgba(245,240,232,0.55);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  padding: 0 6px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  transition: color 150ms ease;
+}
+.btn-ghost:hover { color: var(--ivory); }
+.btn-ghost .arrow { transition: transform 250ms var(--ease-out); }
+.btn-ghost:hover .arrow { transform: translateX(4px); }
+
+.nav .btn-pill { padding: 12px 22px; font-size: 12px; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  padding: 180px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -10%; right: -10%;
+  width: 70%; height: 90%;
+  background: radial-gradient(ellipse at center, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.05) 35%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow { margin-bottom: 40px; }
+.hero h1.display {
+  font-size: clamp(72px, 11vw, 168px);
+  margin-bottom: 36px;
+}
+.hero h1.display > span { display: block; }
+.hero .subhead {
+  font-size: 18px;
+  margin-bottom: 44px;
+  max-width: 46ch;
+}
+.hero-ctas {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  margin-bottom: 60px;
+}
+.hero-stats {
+  display: flex; align-items: center; gap: 18px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ivory-muted);
+}
+.hero-stats .dot {
+  width: 3px; height: 3px; border-radius: 50%; background: var(--gold); opacity: 0.6;
+}
+
+/* Hero visual — floating phones */
+.hero-visual {
+  position: relative;
+  height: 720px;
+  perspective: 1400px;
+}
+.float-card {
+  position: absolute;
+  top: 28px; right: -10px;
+  z-index: 4;
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(20, 16, 10, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius: 14px;
+  padding: 14px 18px;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.5);
+}
+.float-card .pulse {
+  width: 8px; height: 8px; border-radius: 50%; background: #4A9C6F;
+  box-shadow: 0 0 0 0 rgba(74,156,111,0.7);
+  animation: pulse 2.2s var(--ease-out) infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(74,156,111,0.6); }
+  70%  { box-shadow: 0 0 0 14px rgba(74,156,111,0); }
+  100% { box-shadow: 0 0 0 0 rgba(74,156,111,0); }
+}
+.float-card .label {
+  font-size: 10px; letter-spacing: 0.22em; font-weight: 600;
+  color: var(--ivory); text-transform: uppercase;
+}
+
+/* Phone frames */
+.phone {
+  position: absolute;
+  width: 280px;
+  aspect-ratio: 9/19.5;
+  background: #0a0807;
+  border-radius: 38px;
+  border: 1px solid rgba(58,52,43,0.6);
+  box-shadow:
+    inset 0 0 0 1.5px #1A1611,
+    0 30px 80px rgba(0,0,0,0.6),
+    0 12px 32px rgba(0,0,0,0.5);
+  overflow: hidden;
+  padding: 8px;
+}
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 14px; left: 50%; transform: translateX(-50%);
+  width: 90px; height: 22px;
+  background: #050403;
+  border-radius: 999px;
+  z-index: 3;
+}
+.phone .screen {
+  width: 100%; height: 100%;
+  border-radius: 30px;
+  background: #0d0b08;
+  overflow: hidden;
+  position: relative;
+}
+.phone-status {
+  display:flex; justify-content: space-between; align-items: center;
+  padding: 12px 22px 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ivory);
+  height: 44px;
+}
+.phone-status .right { display: flex; gap: 4px; opacity: 0.85; }
+.phone-status .right span { display:inline-block; width: 16px; height: 10px; }
+
+/* Phone A — collection */
+.phone-a { top: 60px; right: 40px; z-index: 3; transform: rotate(2deg); }
+.phone-a .screen { background: linear-gradient(180deg, #14110b 0%, #0d0b08 60%); }
+.app-header {
+  padding: 8px 18px 14px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  color: var(--ivory);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.app-header .avatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: linear-gradient(135deg, #6b4a2a, #2a1d10);
+  border: 1.5px solid var(--gold);
+}
+.value-card {
+  margin: 0 16px 14px;
+  display: grid; grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(245,240,232,0.06);
+  border-radius: 14px;
+  padding: 12px 14px;
+  gap: 8px;
+}
+.value-card .num {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  color: var(--ivory);
+}
+.value-card .num.gold { color: var(--gold); }
+.value-card .lbl {
+  display: block;
+  font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ivory-muted);
+  margin-top: 2px;
+}
+.value-card .eye {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  display: grid; place-items: center;
+}
+.value-card .eye svg { width: 14px; height: 14px; stroke: var(--ivory-dim); fill: none; stroke-width: 1.5; }
+
+.cat-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 16px 8px;
+  font-size: 12px;
+  color: var(--ivory);
+  font-weight: 500;
+}
+.cat-row .edit {
+  font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ivory-muted);
+  border: 1px solid rgba(245,240,232,0.12);
+  border-radius: 999px;
+  padding: 3px 8px;
+}
+.cat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 16px;
+}
+.cat-tile {
+  aspect-ratio: 1.2/1;
+  border-radius: 11px;
+  background: #1a1611;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.cat-tile.wide { grid-column: span 2; aspect-ratio: 2.3/1; }
+.cat-tile::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7) 100%);
+}
+.cat-tile .meta {
+  position: absolute; left: 12px; bottom: 8px; z-index: 1;
+}
+.cat-tile .name {
+  font-family: var(--font-body); font-weight: 600; font-size: 13px; color: var(--ivory);
+  letter-spacing: -0.01em;
+}
+.cat-tile .sub {
+  font-size: 9px; color: var(--ivory-dim);
+  margin-top: 1px;
+}
+.cat-tile .price {
+  position: absolute; right: 12px; bottom: 8px;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 14px; color: var(--gold);
+  z-index: 1;
+}
+.cat-tile.add {
+  background: #1a1611;
+  display: grid; place-items: center;
+}
+.cat-tile.add .plus {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--gold);
+  display: grid; place-items: center;
+  color: var(--obsidian); font-size: 20px; font-weight: 500;
+  line-height: 1;
+}
+.cat-tile.add::after { display: none; }
+
+.tabbar {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  padding: 12px 6px 22px;
+  background: linear-gradient(180deg, transparent, rgba(13,11,8,0.95) 40%);
+  font-size: 9px;
+  color: var(--ivory-muted);
+  text-align: center;
+}
+.tabbar .tab.active { color: var(--gold); }
+.tabbar .tab .ico {
+  width: 18px; height: 18px; margin: 0 auto 4px;
+  border-radius: 4px; background: currentColor; opacity: 0.7;
+}
+
+/* Phone B — explore */
+.phone-b {
+  top: 200px; right: 240px; z-index: 2;
+  transform: rotate(-3deg) translateY(40px);
+  width: 240px;
+}
+.phone-b .screen {
+  background: #0a0908;
+}
+.explore-tabs {
+  display: flex; gap: 6px; padding: 12px 14px;
+}
+.explore-tabs .tab {
+  font-size: 9px; padding: 5px 10px; border-radius: 999px;
+  border: 1px solid rgba(245,240,232,0.12);
+  color: var(--ivory-dim);
+  font-weight: 500;
+}
+.explore-tabs .tab.active { background: var(--gold); color: var(--obsidian); border-color: var(--gold); }
+.explore-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 12px;
+}
+.explore-item {
+  aspect-ratio: 0.72;
+  background: #1a1611;
+  background-size: cover; background-position: center;
+  border-radius: 8px;
+}
+.explore-item:nth-child(1) { aspect-ratio: 0.85; }
+.explore-item:nth-child(4) { aspect-ratio: 0.85; }
+
+/* Hero portfolio mini-card */
+.portfolio-mini {
+  position: absolute;
+  top: 380px; left: 30px;
+  z-index: 5;
+  background: rgba(20, 16, 10, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius: 14px;
+  padding: 16px 20px;
+  min-width: 180px;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.5);
+}
+.portfolio-mini .cap {
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ivory-muted);
+  margin-bottom: 10px;
+}
+.portfolio-mini .val {
+  font-family: var(--font-display);
+  font-size: 28px; font-weight: 600; color: var(--ivory);
+  letter-spacing: -0.01em;
+}
+.portfolio-mini .delta {
+  font-size: 11px;
+  color: var(--success);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   TICKER
+   ============================================================ */
+.ticker {
+  border-top: 1px solid rgba(201,168,76,0.1);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  background: var(--obsidian-90);
+  overflow: hidden;
+  padding: 22px 0;
+}
+.ticker-track {
+  display: flex; gap: 64px;
+  white-space: nowrap;
+  width: max-content;
+  animation: tick 70s linear infinite;
+}
+.ticker:hover .ticker-track { animation-play-state: paused; }
+@keyframes tick {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.ticker-item {
+  display: inline-flex; align-items: baseline; gap: 14px;
+  font-family: var(--font-body); font-size: 13px;
+}
+.ticker-item .cat {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600;
+}
+.ticker-item .name { color: var(--ivory); font-weight: 500; }
+.ticker-item .price { font-family: var(--font-display); font-size: 18px; color: var(--ivory); font-weight: 500; }
+.ticker-item .chg { font-family: var(--font-mono); font-size: 11px; }
+.ticker-item .chg.up { color: var(--success); }
+.ticker-item .chg.dn { color: var(--error); }
+
+/* ============================================================
+   STATS GRID
+   ============================================================ */
+.stats {
+  padding: 140px 0;
+  border-top: 1px solid rgba(201,168,76,0.08);
+  background:
+    radial-gradient(ellipse 72% 56% at 50% 48%, rgba(201,168,76,0.055), transparent 72%),
+    linear-gradient(180deg, #050402 0%, #0a0806 50%, #050402 100%);
+}
+.stats-eyebrow {
+  text-align: center;
+  margin-bottom: 80px;
+  color: rgba(201,168,76,0.62);
+  letter-spacing: 0.32em;
+}
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(201,168,76,0.18);
+  border-bottom: 1px solid rgba(201,168,76,0.18);
+  background: linear-gradient(180deg, rgba(201,168,76,0.028) 0%, rgba(201,168,76,0.006) 100%);
+}
+.stat-cell {
+  padding: 72px 36px;
+  text-align: left;
+  border-right: 1px solid rgba(201,168,76,0.12);
+  position: relative;
+}
+.stat-cell:last-child { border-right: 0; }
+.stat-cell .num {
+  font-family: var(--font-display);
+  font-size: clamp(68px, 8vw, 108px);
+  font-weight: 500;
+  line-height: 0.95;
+  color: var(--ivory);
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.45);
+}
+.stat-cell .num .suffix {
+  color: var(--gold);
+  font-style: italic;
+}
+.stat-cell .lbl {
+  font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--ivory-muted); font-weight: 500;
+}
+
+/* ============================================================
+   FEATURES
+   ============================================================ */
+.feature {
+  padding: 140px 0;
+  position: relative;
+}
+.feature + .feature { padding-top: 60px; }
+/* Tighten the bare-black handoffs flagged in spacing audit:
+   02 Value → 03 Circle  (was 140 + 80 = 220, now 88 + 60 = 148, -33%)
+   04 Explore → Walkthrough (was 140 + 140 = 280, now 88 + 90 = 178, -36%) */
+.feature.reverse:has(+ .feature-circle) { padding-bottom: 88px; }
+.feature:has(+ .walk) { padding-bottom: 88px; }
+.feature-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+.feature.reverse .feature-grid { grid-template-columns: 1fr 1fr; }
+.feature.reverse .f-text { order: 2; }
+.feature.reverse .f-visual { order: 1; }
+.f-text .eyebrow { margin-bottom: 32px; }
+.f-text h2.display {
+  font-size: clamp(48px, 5.5vw, 84px);
+  margin-bottom: 32px;
+  line-height: 1;
+}
+.f-text .subhead {
+  font-size: 17px;
+  max-width: 44ch;
+}
+.f-visual {
+  display: flex; justify-content: center;
+  position: relative;
+  min-height: 600px;
+  align-items: center;
+}
+
+/* Feature visual — phone mock for catalog */
+.f-phone {
+  width: 320px;
+  aspect-ratio: 9/19.5;
+  background: #0a0807;
+  border-radius: 42px;
+  border: 1px solid rgba(58,52,43,0.7);
+  box-shadow:
+    inset 0 0 0 1.5px #1A1611,
+    0 40px 100px rgba(0,0,0,0.7),
+    0 16px 40px rgba(0,0,0,0.5);
+  padding: 9px;
+  position: relative;
+  transform: rotate(-2deg);
+}
+.f-phone::before {
+  content: "";
+  position: absolute;
+  top: 16px; left: 50%; transform: translateX(-50%);
+  width: 104px; height: 26px;
+  background: #050403;
+  border-radius: 999px;
+  z-index: 3;
+}
+.f-phone .screen {
+  width: 100%; height: 100%; border-radius: 33px; background: #0d0b08; overflow: hidden;
+  position: relative;
+}
+
+/* Full-bleed app screenshot inside a phone frame.
+   Source PNGs are 1170×2532 (true iPhone 9:19.5, ~@3x for these frames).
+   Frames set ONLY width + aspect-ratio:9/19.5 (no hardcoded height), so the
+   ratio always matches the source — no distortion. Displayed sizes (282/248/323px)
+   are well under native width, so images are DOWNSCALED (sharp), never upscaled.
+   Do NOT cap frame widths for "sharpness" — there is no upscaling. If frames are
+   ever enlarged past ~390px CSS width, supply higher-res screenshots to stay crisp. */
+.screen-shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  image-rendering: auto; /* best for downscaling photographic content */
+}
+
+/* Feature 2 — chart */
+.chart-card {
+  background: linear-gradient(180deg, #1A1611 0%, #14110b 100%);
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+.chart-head {
+  display:flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 18px;
+}
+.chart-head .title { font-family: var(--font-display); font-size: 22px; font-weight: 500; }
+.chart-head .delta {
+  font-size: 12px; color: var(--success); font-weight: 600;
+  background: rgba(74,156,111,0.12);
+  padding: 5px 10px; border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.chart-tabs { display: flex; gap: 6px; margin-bottom: 24px; }
+.chart-tabs .t {
+  font-size: 11px; font-weight: 500;
+  padding: 5px 11px; border-radius: 6px;
+  border: 1px solid rgba(245,240,232,0.1);
+  color: var(--ivory-dim);
+  cursor: pointer;
+  background: transparent;
+  transition: color .18s ease, border-color .18s ease, background .18s ease;
+  font-family: inherit;
+}
+.chart-tabs .t:hover { color: var(--ivory); border-color: rgba(245,240,232,0.28); }
+.chart-tabs .t.active {
+  color: var(--gold); border-color: var(--gold);
+  background: rgba(201,168,76,0.06);
+}
+.chart-tabs .t:focus-visible {
+  outline: 2px solid var(--gold); outline-offset: 2px;
+}
+.chart-val {
+  font-family: var(--font-display); font-size: 44px; font-weight: 600; color: var(--gold);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.chart-sub {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ivory-muted);
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+.chart-head .delta {
+  transition: color .2s ease, background .2s ease;
+  font-variant-numeric: tabular-nums;
+}
+.chart-head .delta.neg {
+  color: #d97a6f;
+  background: rgba(217,122,111,0.12);
+}
+.chart-stage {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  touch-action: pan-y;
+}
+.chart-svg {
+  width: 100%; height: 150px;
+  display: block;
+  overflow: visible;
+}
+.chart-svg .grid-line {
+  stroke: rgba(245,240,232,0.05);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+}
+.chart-svg .area-path,
+.chart-svg .line-path {
+  transition: d .55s cubic-bezier(.4,.0,.2,1);
+}
+.chart-svg .line-path {
+  filter: drop-shadow(0 6px 18px rgba(201,168,76,0.25));
+}
+.chart-svg .end-dot,
+.chart-svg .end-halo {
+  transition: cx .55s cubic-bezier(.4,.0,.2,1), cy .55s cubic-bezier(.4,.0,.2,1);
+}
+.chart-svg .crosshair {
+  stroke: rgba(201,168,76,0.45);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  opacity: 0;
+  transition: opacity .15s ease;
+  pointer-events: none;
+}
+.chart-svg .hover-dot {
+  fill: var(--gold);
+  stroke: #1A1611;
+  stroke-width: 2.5;
+  opacity: 0;
+  transition: opacity .15s ease;
+  pointer-events: none;
+}
+.chart-stage.active .crosshair,
+.chart-stage.active .hover-dot { opacity: 1; }
+.chart-tooltip {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -100%);
+  background: rgba(20, 16, 10, 0.96);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 8px;
+  padding: 8px 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .15s ease;
+  white-space: nowrap;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 4;
+  margin-top: -10px;
+}
+.chart-stage.active .chart-tooltip { opacity: 1; }
+.chart-tooltip .tt-val {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.chart-tooltip .tt-date {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ivory-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.chart-axis {
+  display:flex; justify-content: space-between;
+  font-size: 10px; color: var(--ivory-muted);
+  font-family: var(--font-mono);
+  margin-top: 10px;
+}
+
+/* Feature 3 — collector cards */
+.collectors {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 560px;
+}
+.collector {
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius: 14px;
+  padding: 12px;
+  background: var(--obsidian-90);
+  transition: border-color 250ms var(--ease-out), transform 250ms var(--ease-out);
+}
+.collector:hover { border-color: rgba(201,168,76,0.5); transform: translateY(-3px); }
+.collector .photo {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  background-size: cover; background-position: center top;
+  background-color: #1a1611;
+  margin-bottom: 14px;
+}
+.collector .name {
+  font-family: var(--font-display); font-weight: 600; font-size: 20px; color: var(--ivory);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.collector .role {
+  font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ivory-muted); font-weight: 500;
+  margin-bottom: 12px;
+}
+.collector .count {
+  font-family: var(--font-display); font-size: 18px; font-weight: 500; color: var(--gold);
+}
+.collector .pieces {
+  list-style: none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(201,168,76,0.1);
+  display: flex; flex-direction: column; gap: 8px;
+}
+.collector .pieces li {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px;
+}
+.collector .piece-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--ivory);
+  letter-spacing: -0.005em;
+}
+.collector .piece-tag {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 999px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+.feature.feature-circle { padding: 60px 0 80px; }
+
+/* Feature 4 — masonry */
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 560px;
+}
+.masonry .tile {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #1a1611;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+  border: 1px solid transparent;
+  transition: border-color 350ms ease;
+}
+.masonry .tile img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 350ms ease;
+}
+.masonry .tile::after {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.25);
+  transition: background 350ms ease;
+  pointer-events: none;
+}
+.masonry .tile .tile-label {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 350ms ease;
+  z-index: 2;
+}
+.masonry .tile .tile-label::before {
+  content: "";
+  width: 40px; height: 2px;
+  background: #C9A84C;
+  transform: translateY(6px);
+  transition: transform 350ms ease;
+}
+.masonry .tile .tile-label span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  font-weight: 500;
+  transform: translateY(-6px);
+  transition: transform 350ms ease;
+}
+.masonry .tile:hover { border-color: rgba(201,168,76,0.4); }
+.masonry .tile:hover img { transform: scale(1.05); }
+.masonry .tile:hover::after { background: rgba(0,0,0,0.65); }
+.masonry .tile:hover .tile-label { opacity: 1; }
+.masonry .tile:hover .tile-label::before,
+.masonry .tile:hover .tile-label span { transform: translateY(0); }
+
+/* ============================================================
+   APP WALKTHROUGH
+   ============================================================ */
+.walk {
+  padding: 90px 0 140px;
+  border-top: 1px solid rgba(201,168,76,0.08);
+}
+.walk-head {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 100px;
+  align-items: end;
+}
+.walk-head h2.display {
+  font-size: clamp(56px, 6vw, 96px);
+}
+.walk-head .subhead {
+  font-size: 17px;
+  color: var(--ivory-dim);
+  max-width: 38ch;
+  padding-bottom: 14px;
+}
+.walk-scroll {
+  display: flex; gap: 28px;
+  overflow-x: auto;
+  padding: 20px max(20px, calc((100% - 220px) / 2)) 40px;
+  margin: 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+}
+.walk-scroll.is-dragging { cursor: grabbing; scroll-snap-type: none; }
+.walk-scroll::-webkit-scrollbar { display: none; }
+.walk-item {
+  flex-shrink: 0; width: 220px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  cursor: pointer;
+}
+.walk-item .walk-num,
+.walk-item .walk-cap {
+  transition: opacity 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0.4;
+}
+.walk-item.is-active .walk-num,
+.walk-item.is-active .walk-cap { opacity: 1; }
+.walk-phone {
+  width: 220px;
+  aspect-ratio: 9/19.5;
+  background: #0a0807;
+  border-radius: 32px;
+  border: 1px solid rgba(58,52,43,0.6);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 0 1px #1A1611;
+  padding: 6px;
+  position: relative;
+  margin-bottom: 24px;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  /* ENHANCEMENT 1 — scale + brightness focus.
+     Default = "far" card (≥2 away). Adjacent + active overrides below. */
+  transform: translateZ(0) scale(0.87);
+  filter: brightness(0.65);
+  transform-origin: 50% 50%;
+  transition:
+    transform 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    filter    350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.walk-item.is-adjacent .walk-phone {
+  transform: translateZ(0) scale(0.92);
+  filter: brightness(0.75);
+}
+.walk-item.is-active .walk-phone {
+  transform: translateZ(0) scale(1);
+  filter: brightness(1.05);
+  will-change: transform;
+}
+
+/* ENHANCEMENT 2 — parallax on advance.
+   Briefly override the static transform with a keyframe animation that
+   includes the destination scale so the two stay composed. */
+.walk-item.is-entering .walk-phone {
+  animation: walkPhoneEnter 400ms ease-out both;
+}
+.walk-item.is-leaving .walk-phone {
+  animation: walkPhoneLeave 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes walkPhoneEnter {
+  from { transform: translateY(12px) scale(1); filter: brightness(1.05); }
+  to   { transform: translateY(0)    scale(1); filter: brightness(1.05); }
+}
+@keyframes walkPhoneLeave {
+  from { transform: translateY(0)   scale(1);    filter: brightness(1.05); }
+  to   { transform: translateY(-8px) scale(0.92); filter: brightness(0.75); }
+}
+
+/* Desktop-only continuous float on the active card.
+   Suppressed by .no-float (set during drag / advance) so transitions
+   between states stay clean. */
+@media (hover: hover) and (pointer: fine) {
+  .walk-item.is-active:hover .walk-phone {
+    animation: walkPhoneFloat 3s ease-in-out infinite;
+  }
+  .walk-item.is-active.no-float:hover .walk-phone,
+  .walk-item.is-entering .walk-phone,
+  .walk-item.is-leaving  .walk-phone {
+    /* is-entering/leaving keyframes already declared above win the cascade,
+       but the no-float guard kills the float during pause windows. */
+  }
+  .walk-item.is-active.no-float:hover .walk-phone {
+    animation: none;
+  }
+}
+@keyframes walkPhoneFloat {
+  0%, 100% { transform: translateY(0)    scale(1); }
+  50%      { transform: translateY(-6px) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .walk-phone,
+  .walk-item .walk-num,
+  .walk-item .walk-cap { transition-duration: 0ms; }
+  .walk-item.is-entering .walk-phone,
+  .walk-item.is-leaving  .walk-phone,
+  .walk-item.is-active:hover .walk-phone { animation: none; }
+}
+.walk-phone .screen,
+.walk-phone .screen * { pointer-events: none; -webkit-user-drag: none; }
+.walk-dots {
+  display: flex; justify-content: center; align-items: center;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+}
+.walk-dot {
+  width: 6px; height: 6px;
+  padding: 0;
+  background: rgba(201,168,76,0.3);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  appearance: none;
+  transition: width 200ms cubic-bezier(0.22, 1, 0.36, 1), background-color 200ms ease-out;
+}
+.walk-dot:hover { background: rgba(201,168,76,0.55); }
+.walk-dot.is-active {
+  width: 24px;
+  background: var(--gold);
+}
+.walk-phone::before {
+  content: "";
+  position: absolute;
+  top: 10px; left: 50%; transform: translateX(-50%);
+  width: 70px; height: 18px;
+  background: #050403;
+  border-radius: 999px;
+  z-index: 3;
+}
+.walk-phone .screen {
+  border-radius: 26px; background: #0d0b08; overflow: hidden; width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ivory-muted);
+  font-family: var(--font-display);
+  font-size: 18px;
+  background-size: cover;
+  background-position: center;
+}
+/* Real app screenshot inside a walkthrough phone.
+   Source PNGs are 1170×2532 (true 9:19.5); displayed ~208px wide → downscaled,
+   never upscaled. Parent .walk-phone owns the 9/19.5 aspect-ratio (no hardcoded
+   height here). All scale/parallax/float animations live on .walk-phone and are
+   untouched — only the screen content changes. */
+.walk-shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  image-rendering: auto;
+}
+
+/* Card 03 — "Live Market Value" teaser screen (no image, built in-frame).
+   Animations on .walk-phone (scale/parallax/float) remain untouched. */
+.walk-phone .screen.live-screen {
+  background: radial-gradient(circle at 50% 42%, #1a1400 0%, #0a0800 78%);
+}
+.live-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 18px;
+  /* entrance float, consistent with other cards */
+  animation: liveFloatIn 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.live-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #C9A84C;
+  /* paused on peripheral cards; resumes only when this card is active */
+  animation: liveDotPulse 1.5s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.walk-item.is-active .live-dot { animation-play-state: running; }
+.live-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #C9A84C;
+}
+.live-headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.05;
+  color: #FFFFFF;
+}
+.live-tease {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(245,240,230,0.6);
+  margin-top: 16px;
+}
+@keyframes liveDotPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+@keyframes liveFloatIn {
+  from { transform: translateY(12px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .live-dot { animation: none; }
+  .live-content { animation-duration: 0ms; }
+}
+.walk-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+.walk-cap {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--ivory-dim);
+  line-height: 1.45;
+  max-width: 22ch;
+}
+
+/* ============================================================
+   WHITELIST
+   ============================================================ */
+.whitelist {
+  padding: 160px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-top: 1px solid rgba(201,168,76,0.08);
+}
+.whitelist::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 90%; height: 140%;
+  background: radial-gradient(ellipse at center, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.05) 30%, transparent 60%);
+  pointer-events: none;
+}
+.whitelist .wrap { position: relative; z-index: 1; }
+.wl-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 36px;
+}
+.wl-badge .gdot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--gold);
+  animation: pulseGold 2s var(--ease-out) infinite;
+}
+@keyframes pulseGold {
+  0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.7); }
+  70%  { box-shadow: 0 0 0 12px rgba(201,168,76,0); }
+  100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+}
+.wl h2.display {
+  font-size: clamp(64px, 8vw, 128px);
+  margin-bottom: 36px;
+  line-height: 0.95;
+}
+.wl .subhead {
+  font-size: 18px; margin: 0 auto 56px; max-width: 56ch;
+}
+/* Slot stacks form + confirm in the same grid cell so toggling state
+   doesn't push anything below the fold. */
+.wl-slot {
+  position: relative;
+  display: grid;
+  max-width: 540px;
+  margin: 0 auto 28px;
+  min-height: 170px;
+  align-items: center;
+  justify-items: stretch;
+}
+.wl-slot > * {
+  grid-area: 1 / 1;
+  transition:
+    opacity 380ms var(--ease-out),
+    transform 380ms var(--ease-out);
+}
+
+.wl-form {
+  display: flex; gap: 8px;
+  width: 100%;
+  background: rgba(20,16,10,0.7);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 999px;
+  padding: 6px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  align-self: center;
+  transform-origin: center;
+  transition:
+    border-color 250ms var(--ease-out),
+    opacity 380ms var(--ease-out),
+    transform 380ms var(--ease-out);
+}
+.wl-slot.success .wl-form {
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+}
+.wl-form:focus-within { border-color: rgba(201,168,76,0.6); }
+.wl-form input {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 14px 22px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ivory);
+}
+.wl-form input::placeholder { color: var(--ivory-muted); }
+
+.wl-msg {
+  min-height: 22px;
+  margin: -32px auto 28px;
+  max-width: 540px;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 200ms var(--ease-out);
+}
+.wl-msg.is-warn,
+.wl-msg.is-error { opacity: 1; color: var(--gold); }
+
+.wl-perks {
+  display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.wl-perk {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ivory-dim);
+  font-weight: 500;
+}
+.wl-perk .gdot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+.wl-fineprint {
+  font-size: 12px; color: var(--ivory-muted);
+  font-style: italic;
+}
+
+/* Confirmation — sits in the same slot as the form */
+.wl-confirm {
+  display: flex;
+  flex-direction: column; align-items: center;
+  gap: 14px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+  align-self: center;
+  transform-origin: center;
+}
+.wl-slot.success .wl-confirm {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.wl-check {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: grid; place-items: center;
+  color: var(--obsidian);
+  box-shadow: 0 0 0 1px rgba(201,168,76,0.3), 0 0 60px rgba(201,168,76,0.35);
+}
+.wl-check svg { width: 26px; height: 26px; }
+.wl-confirm .ttl {
+  font-family: var(--font-display);
+  font-size: 34px; font-weight: 500;
+  color: var(--ivory);
+  letter-spacing: -0.018em;
+  line-height: 1.1;
+}
+.wl-confirm .ttl em { color: var(--gold); font-style: italic; }
+.wl-confirm .sub {
+  font-size: 14px; color: var(--ivory-dim);
+  max-width: 36ch;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  padding: 80px 0 50px;
+  border-top: 1px solid rgba(201,168,76,0.08);
+  background: var(--obsidian-90);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 56px;
+}
+.footer-brand .brand { margin-bottom: 18px; }
+.footer-brand p {
+  font-size: 14px; color: var(--ivory-muted); line-height: 1.6; max-width: 30ch;
+}
+.footer-col h5 {
+  font-family: var(--font-body); font-weight: 600; font-size: 11px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-col a {
+  font-size: 14px; color: var(--ivory-dim);
+  transition: color 200ms var(--ease-out);
+}
+.footer-col a:hover { color: var(--ivory); }
+.social-links {
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 18px;
+}
+.social-links a {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #F5F0E8; opacity: 0.5;
+  transition: opacity 200ms var(--ease-out);
+}
+.social-links a:hover { opacity: 1; }
+.social-links svg { display: block; width: 18px; height: 18px; }
+.hero-social {
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 28px;
+  font-family: var(--font-body);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ivory-muted);
+}
+.hero-social .hero-social-label { margin-right: 4px; }
+.hero-social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #C9A84C; opacity: 0.5;
+  transition: opacity 200ms var(--ease-out);
+}
+.hero-social a:hover { opacity: 1; }
+.hero-social svg { display: block; width: 16px; height: 16px; }
+.copyright {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid rgba(201,168,76,0.08);
+  font-size: 12px; color: var(--ivory-muted);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   REVEAL ANIMATIONS
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 900ms var(--ease-out), transform 900ms var(--ease-out);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hero { padding: 130px 0 60px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 60px; }
+  .hero h1.display { font-size: clamp(64px, 16vw, 110px); }
+  .hero-visual { height: 580px; }
+  .portfolio-mini { top: auto; bottom: 0; left: 0; }
+  .float-card { top: 0; right: 0; }
+  .phone-a { right: 0; top: 30px; }
+  .phone-b { right: 200px; top: 160px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-cell:nth-child(2) { border-right: 0; }
+  .stat-cell:nth-child(1), .stat-cell:nth-child(2) { border-bottom: 1px solid rgba(201,168,76,0.12); }
+  .feature-grid, .feature.reverse .feature-grid { grid-template-columns: 1fr; gap: 60px; }
+  .feature.reverse .f-text { order: 1; }
+  .feature.reverse .f-visual { order: 2; }
+  .f-visual { min-height: auto; }
+  .walk-head { grid-template-columns: 1fr; gap: 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .copyright { flex-direction: column; gap: 12px; }
+}
+@media (max-width: 560px) {
+  .wrap { padding: 0 20px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat-cell { border-right: 0 !important; border-bottom: 1px solid rgba(201,168,76,0.12); padding: 48px 20px; }
+  .stat-cell:last-child { border-bottom: 0; }
+  .wl-form { flex-direction: column; border-radius: 18px; padding: 8px; }
+  .wl-form input { text-align: center; }
+  .wl-form .btn-pill { width: 100%; justify-content: center; }
+  .wl-perks { gap: 18px; flex-direction: column; align-items: center; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-visual { height: 520px; }
+  .phone-a { width: 240px; right: -10px; }
+  .phone-b { width: 200px; right: 150px; }
+  .masonry { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Colvesta home">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M60,16 C60,9.373 54.627,4 48,4 L16,4 C9.373,4 4,9.373 4,16 L4,48 C4,54.627 9.373,60 16,60 L48,60 C54.627,60 60,54.627 60,48 L60,42 L48,42 C48,47.523 44.418,52 38,52 L26,52 C18.268,52 12,45.732 12,38 L12,26 C12,18.268 18.268,12 26,12 L38,12 C44.418,12 48,16.477 48,22 L60,22 Z" fill="#C9A84C"/>
+      </svg>
+      <span>Colvesta</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#app">App</a>
+      <a href="#whitelist">Whitelist</a>
+    </div>
+    <a class="btn-pill" href="#whitelist">Join Whitelist</a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow hero-eyebrow reveal"><span class="dash"></span>The collector's ledger · Est. 2026</div>
+      <h1 class="display reveal">
+        <span>Catalog.</span>
+        <span>Value.</span>
+        <span><em>Showcase.</em></span>
+      </h1>
+      <p class="subhead reveal">Colvesta is the private vault for serious collectors — catalog everything, track live market value, and move inside a circle of people who actually get it.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn-pill lg" href="#whitelist">Reserve Your Spot</a>
+        <a class="btn-ghost" href="#features">See the app <span class="arrow">→</span></a>
+      </div>
+      <div class="hero-stats reveal">
+        <span>12+ Categories</span><span class="dot"></span>
+        <span>iOS Native</span><span class="dot"></span>
+        <span>Launching Soon</span>
+      </div>
+      <div class="hero-social reveal">
+        <span class="hero-social-label">Follow our journey</span>
+        <a href="https://www.instagram.com/colvesta.app/" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://x.com/Colvesta_app" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.53 3h2.97l-6.49 7.41L21.75 21h-6.02l-4.71-6.16L5.6 21H2.62l6.94-7.93L2.25 3h6.17l4.26 5.63L17.53 3zm-1.06 16.2h1.66L7.62 4.7H5.84l10.63 14.5z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="float-card">
+        <span class="pulse"></span>
+        <span class="label">Whitelist · Open</span>
+      </div>
+
+      <div class="portfolio-mini">
+        <div class="cap">Portfolio · Today</div>
+        <div class="val">+$1,204</div>
+        <div class="delta">↑ 2.4% vs yesterday</div>
+      </div>
+
+      <!-- Phone B: behind (Explore) -->
+      <div class="phone phone-b" aria-hidden="true">
+        <div class="screen">
+          <img class="screen-shot" src="assets/app-profile.png" alt="Colvesta profile screen" />
+        </div>
+      </div>
+
+      <!-- Phone A: front (Collection) -->
+      <div class="phone phone-a" aria-hidden="true">
+        <div class="screen">
+          <img class="screen-shot" src="assets/app-collection.png" alt="Colvesta collection screen" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TICKER
+     ============================================================ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<!-- ============================================================
+     STATS
+     ============================================================ -->
+<section class="stats">
+  <div class="wrap">
+    <div class="eyebrow stats-eyebrow reveal">The ledger, at scale</div>
+    <div class="stats-grid">
+      <div class="stat-cell reveal">
+        <div class="num">12<span class="suffix">+</span></div>
+        <div class="lbl">Collection categories</div>
+      </div>
+      <div class="stat-cell reveal">
+        <div class="num">iOS</div>
+        <div class="lbl">Native app</div>
+      </div>
+      <div class="stat-cell reveal">
+        <div class="num">∞</div>
+        <div class="lbl">Pieces per collection</div>
+      </div>
+      <div class="stat-cell reveal">
+        <div class="num"><em style="font-style:italic;color:var(--gold);">Free</em></div>
+        <div class="lbl">To start</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURE 01 — CATALOG
+     ============================================================ -->
+<section class="feature" id="features">
+  <div class="wrap feature-grid">
+    <div class="f-text">
+      <div class="eyebrow reveal">01 — Catalog</div>
+      <h2 class="display reveal">Everything you own,<br/>one <em>lean</em> ledger.</h2>
+      <p class="subhead reveal">Photograph, tag and organize every piece across unlimited categories. Cards, sneakers, watches, art, vinyl, whiskey — whatever you collect, it belongs here.</p>
+    </div>
+    <div class="f-visual reveal">
+      <div class="f-phone">
+        <div class="screen">
+          <img class="screen-shot" src="assets/app-watches.png" alt="Colvesta watches collection screen" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURE 02 — VALUE
+     ============================================================ -->
+<section class="feature reverse">
+  <div class="wrap feature-grid">
+    <div class="f-text">
+      <div class="eyebrow reveal">02 — Value</div>
+      <h2 class="display reveal">Real-time<br/><em>market</em> value.</h2>
+      <p class="subhead reveal">Colvesta pulls from live market sources by category. Your portfolio breathes with the market — no more spreadsheets, no more guessing.</p>
+    </div>
+    <div class="f-visual reveal">
+      <div class="chart-card" id="valueChart">
+        <div class="chart-head">
+          <div class="title">Total Portfolio Value</div>
+          <div class="delta" data-chart-delta>+18.2%</div>
+        </div>
+        <div class="chart-tabs" role="tablist" aria-label="Portfolio history range">
+          <button type="button" class="t active" data-range="1Y" role="tab" aria-selected="true">1Y</button>
+          <button type="button" class="t" data-range="6M" role="tab" aria-selected="false">6M</button>
+          <button type="button" class="t" data-range="3M" role="tab" aria-selected="false">3M</button>
+          <button type="button" class="t" data-range="1M" role="tab" aria-selected="false">1M</button>
+        </div>
+        <div class="chart-val" data-chart-val>$84,200</div>
+        <div class="chart-sub" data-chart-sub>Trailing 12 months</div>
+        <div class="chart-stage" data-chart-stage>
+          <svg class="chart-svg" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="cf" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.32"/>
+                <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <line class="grid-line" x1="0" y1="30"  x2="400" y2="30"/>
+            <line class="grid-line" x1="0" y1="70"  x2="400" y2="70"/>
+            <line class="grid-line" x1="0" y1="110" x2="400" y2="110"/>
+            <path class="area-path" d="" fill="url(#cf)"/>
+            <path class="line-path" d="" stroke="#C9A84C" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line class="crosshair" x1="0" y1="0" x2="0" y2="150"/>
+            <circle class="end-halo" r="10" fill="#C9A84C" fill-opacity="0.18"/>
+            <circle class="end-dot"  r="4.5" fill="#C9A84C"/>
+            <circle class="hover-dot" r="5.5"/>
+          </svg>
+          <div class="chart-tooltip" data-chart-tooltip>
+            <div class="tt-val">$0</div>
+            <div class="tt-date">—</div>
+          </div>
+        </div>
+        <div class="chart-axis" data-chart-axis>
+          <span>Jan</span><span>Apr</span><span>Jul</span><span>Oct</span><span>Now</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURE 03 — CIRCLE
+     ============================================================ -->
+<section class="feature feature-circle" id="collectors">
+  <div class="wrap feature-grid">
+    <div class="f-text">
+      <div class="eyebrow reveal">03 — Circle</div>
+      <h2 class="display reveal">Fellow collectors,<br/>not <em>followers</em>.</h2>
+      <p class="subhead reveal">Follow the people whose taste you admire. Discover pieces from your circle. Keep everything else private — no public clout required.</p>
+    </div>
+    <div class="f-visual reveal">
+      <div class="collectors">
+        <div class="collector">
+          <div class="photo" style="background-image:url('assets/25.jpg')"></div>
+          <div class="name">Marcus L.</div>
+          <div class="role">Horologist</div>
+          <div class="count">47 pieces</div>
+          <ul class="pieces">
+            <li><span class="piece-name">Patek 5711</span><span class="piece-tag">Watch</span></li>
+            <li><span class="piece-name">AP Royal Oak</span><span class="piece-tag">Watch</span></li>
+            <li><span class="piece-name">Daytona 116500</span><span class="piece-tag">Watch</span></li>
+          </ul>
+        </div>
+        <div class="collector">
+          <div class="photo" style="background-image:url('assets/55.jpg')"></div>
+          <div class="name">Elena V.</div>
+          <div class="role">Modern Art</div>
+          <div class="count">128 pieces</div>
+          <ul class="pieces">
+            <li><span class="piece-name">Basquiat print</span><span class="piece-tag">Art</span></li>
+            <li><span class="piece-name">Koons sculpture</span><span class="piece-tag">Art</span></li>
+            <li><span class="piece-name">Hirst spin</span><span class="piece-tag">Art</span></li>
+          </ul>
+        </div>
+        <div class="collector">
+          <div class="photo" style="background-image:url('assets/eight.jpg')"></div>
+          <div class="name">Noah R.</div>
+          <div class="role">TCG Graders</div>
+          <div class="count">312 pieces</div>
+          <ul class="pieces">
+            <li><span class="piece-name">Charizard 1st Ed.</span><span class="piece-tag">Card</span></li>
+            <li><span class="piece-name">Black Lotus α</span><span class="piece-tag">Card</span></li>
+            <li><span class="piece-name">Illustrator Pika</span><span class="piece-tag">Card</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURE 04 — EXPLORE
+     ============================================================ -->
+<section class="feature reverse">
+  <div class="wrap feature-grid">
+    <div class="f-text">
+      <div class="eyebrow reveal">04 — Explore</div>
+      <h2 class="display reveal">Discovery without<br/>the <em>algorithm</em>.</h2>
+      <p class="subhead reveal">A curated feed of what collectors are adding and admiring. No ads. No noise. Just pieces worth seeing, from people worth knowing.</p>
+    </div>
+    <div class="f-visual reveal">
+      <div class="masonry">
+        <div class="tile"><img src="assets/explore-watch-1.jpg" alt="Vintage watch" loading="lazy"/><div class="tile-label"><span>Watches</span></div></div>
+        <div class="tile"><img src="assets/explore-cards-1.jpg" alt="Graded trading cards" loading="lazy"/><div class="tile-label"><span>Trading Cards</span></div></div>
+        <div class="tile"><img src="assets/explore-comics-1.jpg" alt="Graded comic book" loading="lazy"/><div class="tile-label"><span>Comics</span></div></div>
+        <div class="tile"><img src="assets/explore-coins.jpg" alt="Collectible coins" loading="lazy"/><div class="tile-label"><span>Coins</span></div></div>
+        <div class="tile"><img src="assets/explore-vinyl.jpg" alt="Vinyl record" loading="lazy"/><div class="tile-label"><span>Vinyl</span></div></div>
+        <div class="tile"><img src="assets/explore-art.jpg" alt="Contemporary art" loading="lazy"/><div class="tile-label"><span>Art</span></div></div>
+        <div class="tile"><img src="assets/explore-camera-1.jpg" alt="Vintage camera" loading="lazy"/><div class="tile-label"><span>Cameras</span></div></div>
+        <div class="tile"><img src="assets/explore-sneakers.jpg" alt="Vintage sneakers" loading="lazy"/><div class="tile-label"><span>Sneakers</span></div></div>
+        <div class="tile"><img src="assets/explore-stamps-1.jpg" alt="Vintage stamps" loading="lazy"/><div class="tile-label"><span>Stamps</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WALKTHROUGH
+     ============================================================ -->
+<section class="walk" id="app">
+  <div class="wrap">
+    <div class="walk-head">
+      <div>
+        <div class="eyebrow reveal" style="margin-bottom:24px;">App walkthrough</div>
+        <h2 class="display reveal">Every screen<br/><em>considered</em>.</h2>
+      </div>
+      <p class="subhead reveal">Five deliberate surfaces — from the daily pulse of your portfolio to your collector circle.</p>
+    </div>
+    <div class="walk-scroll">
+      <div class="walk-item is-active reveal">
+        <div class="walk-phone"><div class="screen"><img class="walk-shot" src="assets/app-collection.png" alt="Your Collection screen" /></div></div>
+        <div class="walk-num">01 / 05</div>
+        <div class="walk-cap">Your portfolio at a glance — total value, every category, one screen.</div>
+      </div>
+      <div class="walk-item is-adjacent reveal">
+        <div class="walk-phone"><div class="screen"><img class="walk-shot" src="assets/app-watches.png" alt="Watches category detail screen" /></div></div>
+        <div class="walk-num">02 / 05</div>
+        <div class="walk-cap">Drill into any category. Every piece, photographed and valued.</div>
+      </div>
+      <div class="walk-item reveal">
+        <div class="walk-phone"><div class="screen live-screen"><div class="live-content">
+          <div class="live-badge"><span class="live-dot"></span><span class="live-label">LIVE</span></div>
+          <div class="live-headline">Market<br/>Value.</div>
+          <div class="live-tease">Revealing soon.</div>
+        </div></div></div>
+        <div class="walk-num">03 / 05</div>
+        <div class="walk-cap">Your portfolio breathes with the market. Refreshed daily.</div>
+      </div>
+      <div class="walk-item reveal">
+        <div class="walk-phone"><div class="screen"><img class="walk-shot" src="assets/app-explore.png" alt="Explore feed screen" /></div></div>
+        <div class="walk-num">04 / 05</div>
+        <div class="walk-cap">Discovery without the algorithm. Pieces worth seeing, from people worth knowing.</div>
+      </div>
+      <div class="walk-item reveal">
+        <div class="walk-phone"><div class="screen"><img class="walk-shot" src="assets/app-profile.png" alt="Profile and Circle screen" /></div></div>
+        <div class="walk-num">05 / 05</div>
+        <div class="walk-cap">Your collector identity. Your circle. No public clout required.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHITELIST
+     ============================================================ -->
+<section class="whitelist wl" id="whitelist">
+  <div class="wrap">
+    <div class="wl-badge reveal"><span class="gdot"></span>Early access · Limited spots</div>
+    <h2 class="display reveal">Be first.<br/>Start your <em>ledger</em>.</h2>
+    <p class="subhead reveal">Colvesta is coming to the App Store. Join the whitelist for beta access, founding member status, and launch day notification.</p>
+
+    <div class="wl-slot reveal" id="wl-slot">
+      <form class="wl-form" id="wl-form" novalidate>
+        <input id="wl-email" type="email" inputmode="email" autocomplete="email" placeholder="your@email.com" aria-label="Email address" required />
+        <button class="btn-pill" type="submit" id="wl-submit">Reserve Spot</button>
+      </form>
+
+      <div class="wl-confirm" id="wl-confirm" role="status" aria-live="polite">
+        <div class="wl-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="ttl">You're on the <em>list</em>.</div>
+          <div class="sub">We'll notify you the moment Colvesta is live.</div>
+        </div>
+      </div>
+    </div>
+    <div id="wl-msg" class="wl-msg" role="alert" aria-live="polite"></div>
+
+    <div class="wl-perks reveal">
+      <span class="wl-perk"><span class="gdot"></span>Beta Access</span>
+      <span class="wl-perk"><span class="gdot"></span>Founding Member Badge</span>
+      <span class="wl-perk"><span class="gdot"></span>Launch Day Notification</span>
+    </div>
+    <div class="wl-fineprint reveal">No spam. Ever. Just your launch notification.</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M60,16 C60,9.373 54.627,4 48,4 L16,4 C9.373,4 4,9.373 4,16 L4,48 C4,54.627 9.373,60 16,60 L48,60 C54.627,60 60,54.627 60,48 L60,42 L48,42 C48,47.523 44.418,52 38,52 L26,52 C18.268,52 12,45.732 12,38 L12,26 C12,18.268 18.268,12 26,12 L38,12 C44.418,12 48,16.477 48,22 L60,22 Z" fill="#C9A84C"/>
+          </svg>
+          <span>Colvesta</span>
+        </a>
+        <p>The collector's ledger. Catalog, value, and quietly share the things worth keeping.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/colvesta.app/" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://x.com/Colvesta_app" target="_blank" rel="noopener noreferrer" aria-label="Colvesta on X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.53 3h2.97l-6.49 7.41L21.75 21h-6.02l-4.71-6.16L5.6 21H2.62l6.94-7.93L2.25 3h6.17l4.26 5.63L17.53 3zm-1.06 16.2h1.66L7.62 4.7H5.84l10.63 14.5z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#app">App</a></li>
+          <li><a href="#whitelist">Whitelist</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Fine print</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="security.html">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Colvesta, Inc. · Made with quiet attention.</span>
+      <span class="mono">Pre-launch · v 0.9</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   NAV — scrolled state
+   ============================================================ */
+const nav = document.getElementById('nav');
+const setNav = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+setNav();
+window.addEventListener('scroll', setNav, { passive: true });
+
+/* ============================================================
+   TICKER — populate twice for seamless infinite scroll
+   ============================================================ */
+const tickerItems = [
+  { cat: 'Watches', name: 'Rolex Submariner', price: '$13,200', chg: '+1.8%', up: true },
+  { cat: 'Cards',   name: '1st Ed. Charizard', price: '$18,400', chg: '+2.4%', up: true },
+  { cat: 'Figures', name: 'Berserk Guts 1/4',  price: '$680',    chg: '+0.9%', up: true },
+  { cat: 'Sneakers',name: 'Jordan 1 Bred',     price: '$420',    chg: '-0.4%', up: false },
+  { cat: 'Coins',   name: '1921 Morgan Silver',price: '$340',    chg: '+0.3%', up: true },
+  { cat: 'Bags',    name: 'Hermès Birkin 25',  price: '$11,000', chg: '+1.1%', up: true },
+  { cat: 'Vinyl',   name: 'Blue Note 1568',    price: '$3,200',  chg: '+0.4%', up: true },
+  { cat: 'Whiskey', name: 'Macallan 25',       price: '$4,900',  chg: '-0.6%', up: false },
+];
+const track = document.getElementById('ticker-track');
+const itemHTML = (it) => `<span class="ticker-item"><span class="cat">${it.cat}</span><span class="name">${it.name}</span><span class="price">${it.price}</span><span class="chg ${it.up ? 'up' : 'dn'}">${it.chg}</span></span>`;
+track.innerHTML = (tickerItems.map(itemHTML).join('') + tickerItems.map(itemHTML).join(''));
+
+/* ============================================================
+   REVEAL ON SCROLL
+   ============================================================ */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      const delay = (e.target.dataset.delay) ? parseInt(e.target.dataset.delay) : 0;
+      setTimeout(() => e.target.classList.add('in'), delay);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  // stagger siblings inside the same section
+  const sibIdx = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal')).indexOf(el);
+  el.dataset.delay = Math.max(0, sibIdx * 80);
+  io.observe(el);
+});
+
+/* ============================================================
+   WHITELIST FORM
+   ============================================================ */
+const form = document.getElementById('wl-form');
+const confirm = document.getElementById('wl-confirm');
+const emailInput = document.getElementById('wl-email');
+const submitBtn = document.getElementById('wl-submit');
+const msgEl = document.getElementById('wl-msg');
+const STORE_KEY = 'colvesta_whitelist_email';
+
+const SUPABASE_URL = 'https://yctaoljqeaokxstbvrei.supabase.co/rest/v1/whitelist_emails';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljdGFvbGpxZWFva3hzdGJ2cmVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk3NDUzMTgsImV4cCI6MjA5NTMyMTMxOH0.IkodHKKR4qgJPq9nHLG5UmB2vZdI5DTTmBwZB1Y-3hI';
+
+const slot = document.getElementById('wl-slot');
+
+function showConfirm() {
+  if (msgEl) { msgEl.textContent = ''; msgEl.className = 'wl-msg'; }
+  slot.classList.add('success');
+}
+
+function setMsg(text, tone) {
+  if (!msgEl) return;
+  msgEl.textContent = text || '';
+  msgEl.className = 'wl-msg' + (tone ? ' is-' + tone : '');
+}
+
+function setLoading(loading) {
+  submitBtn.disabled = loading;
+  emailInput.disabled = loading;
+  submitBtn.textContent = loading ? 'Joining…' : 'Reserve Spot';
+  submitBtn.style.opacity = loading ? '0.7' : '';
+  submitBtn.style.cursor = loading ? 'wait' : '';
+}
+
+if (localStorage.getItem(STORE_KEY)) {
+  showConfirm();
+}
+
+form.addEventListener('submit', async (ev) => {
+  ev.preventDefault();
+  setMsg('', null);
+  const email = emailInput.value.trim();
+  const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!valid) {
+    form.style.borderColor = 'rgba(194,91,78,0.7)';
+    setMsg('Please enter a valid email address.', 'warn');
+    emailInput.focus();
+    setTimeout(() => form.style.borderColor = '', 1400);
+    return;
+  }
+
+  setLoading(true);
+  try {
+    const res = await fetch(SUPABASE_URL, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ email })
+    });
+
+    if (res.status === 201) {
+      localStorage.setItem(STORE_KEY, email);
+      emailInput.value = '';
+      showConfirm();
+    } else if (res.status === 409) {
+      setMsg("You're already on the list.", 'warn');
+    } else {
+      setMsg('Something went wrong. Try again.', 'error');
+    }
+  } catch (err) {
+    setMsg('Something went wrong. Try again.', 'error');
+  } finally {
+    setLoading(false);
+  }
+});
+
+/* ============================================================
+   INTERACTIVE VALUE CHART
+   ============================================================ */
+(() => {
+  const root = document.getElementById('valueChart');
+  if (!root) return;
+
+  // Deterministic pseudo-random for stable but organic-looking series
+  const rng = (seed) => () => {
+    seed = (seed * 9301 + 49297) % 233280;
+    return seed / 233280;
+  };
+  const buildSeries = (count, start, end, vol, seed) => {
+    const r = rng(seed);
+    const pts = [];
+    // Generate a wandering walk, then blend toward target end value
+    let v = start;
+    for (let i = 0; i < count; i++) {
+      const t = i / (count - 1);
+      const drift = (end - start) * t;
+      const noise = (r() - 0.45) * vol;
+      v = start + drift + noise * (1 - Math.abs(t - 0.5));
+      pts.push(Math.max(start * 0.5, v));
+    }
+    pts[0] = start;
+    pts[pts.length - 1] = end;
+    return pts;
+  };
+
+  const DATA = {
+    '1Y': {
+      sub: 'Trailing 12 months',
+      values: buildSeries(13, 71240, 84200, 6800, 31),
+      labels: ['May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May'],
+      axis:   ['Jun','Sep','Dec','Mar','Now'],
+    },
+    '6M': {
+      sub: 'Trailing 6 months',
+      values: buildSeries(13, 78900, 84200, 3400, 57),
+      labels: ['Nov','Nov','Dec','Dec','Jan','Jan','Feb','Feb','Mar','Mar','Apr','Apr','May'],
+      axis:   ['Dec','Jan','Feb','Mar','Now'],
+    },
+    '3M': {
+      sub: 'Trailing 3 months',
+      values: buildSeries(13, 81600, 84200, 1800, 119),
+      labels: ['Feb','Feb','Feb','Mar','Mar','Mar','Mar','Apr','Apr','Apr','Apr','May','May'],
+      axis:   ['Feb','Mar','Apr','Apr','Now'],
+    },
+    '1M': {
+      sub: 'Trailing 30 days',
+      values: buildSeries(13, 83100, 84200, 900, 211),
+      labels: ['Apr 19','Apr 22','Apr 25','Apr 28','May 1','May 3','May 5','May 7','May 9','May 11','May 13','May 16','May 19'],
+      axis:   ['Apr 22','Apr 28','May 5','May 12','Now'],
+    },
+  };
+
+  const W = 400, H = 150, PAD_TOP = 14, PAD_BOT = 14;
+  const stage = root.querySelector('.chart-stage');
+  const svg = root.querySelector('.chart-svg');
+  const linePath = root.querySelector('.line-path');
+  const areaPath = root.querySelector('.area-path');
+  const endDot = root.querySelector('.end-dot');
+  const endHalo = root.querySelector('.end-halo');
+  const crosshair = root.querySelector('.crosshair');
+  const hoverDot = root.querySelector('.hover-dot');
+  const tooltip = root.querySelector('[data-chart-tooltip]');
+  const ttVal = tooltip.querySelector('.tt-val');
+  const ttDate = tooltip.querySelector('.tt-date');
+  const valEl = root.querySelector('[data-chart-val]');
+  const subEl = root.querySelector('[data-chart-sub]');
+  const deltaEl = root.querySelector('[data-chart-delta]');
+  const axisEl = root.querySelector('[data-chart-axis]');
+  const tabs = root.querySelectorAll('.chart-tabs .t');
+
+  let current = '1Y';
+  let points = []; // {x, y, value, label}
+
+  const fmtMoney = (n) => {
+    if (n >= 1000) return '$' + n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+    return '$' + Math.round(n);
+  };
+
+  // Catmull-Rom → cubic Bezier path
+  const buildPath = (pts) => {
+    if (pts.length < 2) return '';
+    let d = `M ${pts[0].x.toFixed(2)},${pts[0].y.toFixed(2)}`;
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p0 = pts[i - 1] || pts[i];
+      const p1 = pts[i];
+      const p2 = pts[i + 1];
+      const p3 = pts[i + 2] || p2;
+      const c1x = p1.x + (p2.x - p0.x) / 6;
+      const c1y = p1.y + (p2.y - p0.y) / 6;
+      const c2x = p2.x - (p3.x - p1.x) / 6;
+      const c2y = p2.y - (p3.y - p1.y) / 6;
+      d += ` C ${c1x.toFixed(2)},${c1y.toFixed(2)} ${c2x.toFixed(2)},${c2y.toFixed(2)} ${p2.x.toFixed(2)},${p2.y.toFixed(2)}`;
+    }
+    return d;
+  };
+
+  const render = (key) => {
+    const ds = DATA[key];
+    const values = ds.values;
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    const range = Math.max(1, max - min);
+    const padded = range * 0.18; // visual padding
+    const lo = min - padded;
+    const hi = max + padded;
+    const usable = H - PAD_TOP - PAD_BOT;
+
+    points = values.map((v, i) => ({
+      x: (i / (values.length - 1)) * W,
+      y: PAD_TOP + (1 - (v - lo) / (hi - lo)) * usable,
+      value: v,
+      label: ds.labels[i] || '',
+    }));
+
+    const linePathStr = buildPath(points);
+    const areaPathStr = linePathStr + ` L ${W},${H} L 0,${H} Z`;
+    linePath.setAttribute('d', linePathStr);
+    areaPath.setAttribute('d', areaPathStr);
+
+    const last = points[points.length - 1];
+    endDot.setAttribute('cx', last.x);
+    endDot.setAttribute('cy', last.y);
+    endHalo.setAttribute('cx', last.x);
+    endHalo.setAttribute('cy', last.y);
+
+    // Header summary
+    const first = values[0];
+    const lastV = values[values.length - 1];
+    const pct = ((lastV - first) / first) * 100;
+    const sign = pct >= 0 ? '+' : '−';
+    deltaEl.textContent = `${sign}${Math.abs(pct).toFixed(1)}%`;
+    deltaEl.classList.toggle('neg', pct < 0);
+    subEl.textContent = ds.sub;
+    valEl.textContent = fmtMoney(lastV);
+
+    // Axis labels
+    axisEl.innerHTML = ds.axis.map(a => `<span>${a}</span>`).join('');
+  };
+
+  // Tooltip / crosshair interaction
+  const updateHover = (clientX) => {
+    const rect = svg.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    // Find nearest point
+    let nearest = points[0];
+    let best = Infinity;
+    const targetX = ratio * W;
+    for (const p of points) {
+      const d = Math.abs(p.x - targetX);
+      if (d < best) { best = d; nearest = p; }
+    }
+    crosshair.setAttribute('x1', nearest.x);
+    crosshair.setAttribute('x2', nearest.x);
+    hoverDot.setAttribute('cx', nearest.x);
+    hoverDot.setAttribute('cy', nearest.y);
+
+    // Position tooltip in CSS px coordinates
+    const stageRect = stage.getBoundingClientRect();
+    const left = (nearest.x / W) * stageRect.width;
+    const top = (nearest.y / H) * stageRect.height;
+    // Keep tooltip inside the stage
+    const clampedLeft = Math.max(60, Math.min(stageRect.width - 60, left));
+    tooltip.style.left = clampedLeft + 'px';
+    tooltip.style.top = top + 'px';
+    ttVal.textContent = fmtMoney(nearest.value);
+    ttDate.textContent = nearest.label;
+  };
+
+  const activate = () => stage.classList.add('active');
+  const deactivate = () => stage.classList.remove('active');
+
+  stage.addEventListener('mouseenter', activate);
+  stage.addEventListener('mouseleave', deactivate);
+  stage.addEventListener('mousemove', (e) => { activate(); updateHover(e.clientX); });
+  stage.addEventListener('touchstart', (e) => {
+    if (e.touches[0]) { activate(); updateHover(e.touches[0].clientX); }
+  }, { passive: true });
+  stage.addEventListener('touchmove', (e) => {
+    if (e.touches[0]) updateHover(e.touches[0].clientX);
+  }, { passive: true });
+  stage.addEventListener('touchend', () => {
+    setTimeout(deactivate, 1200);
+  });
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const key = tab.dataset.range;
+      if (key === current) return;
+      current = key;
+      tabs.forEach(t => {
+        const active = t === tab;
+        t.classList.toggle('active', active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      render(key);
+    });
+  });
+
+  render(current);
+  // Reposition tooltip + redraw on resize (axis-dependent x mapping is in viewBox units, so just redraw to refresh tooltip metrics)
+  window.addEventListener('resize', () => render(current));
+})();
+
+/* Smooth-scroll for anchor links */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (ev) => {
+    const id = a.getAttribute('href');
+    if (id.length > 1) {
+      const t = document.querySelector(id);
+      if (t) {
+        ev.preventDefault();
+        const y = t.getBoundingClientRect().top + window.scrollY - 60;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  });
+});
+</script>
+
+<!-- Page-fade transition: dark bridge between landing and interior pages -->
+<style>
+  .page-fade {
+    position: fixed; inset: 0;
+    background: #000;
+    z-index: 99999;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 200ms ease-out;
+  }
+  .page-fade.is-ready { opacity: 0; }
+  .page-fade.is-leaving { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .page-fade { transition: none; opacity: 0 !important; }
+  }
+</style>
+<script>
+/* ============================================================
+   APP WALKTHROUGH — premium carousel controller
+   - Active pill indicators (dynamic count = items.length)
+   - Hard center-snap with active-card focal point
+   - Desktop drag (0.85 multiplier) + velocity flick
+   - Mobile relies on native CSS scroll-snap
+   ============================================================ */
+(function () {
+  var scroll = document.querySelector('.walk-scroll');
+  if (!scroll) return;
+  var items = Array.prototype.slice.call(scroll.querySelectorAll('.walk-item'));
+  if (items.length === 0) return;
+
+  // Build pill indicators
+  var dots = document.createElement('div');
+  dots.className = 'walk-dots';
+  dots.setAttribute('role', 'tablist');
+  dots.setAttribute('aria-label', 'App walkthrough slides');
+  for (var i = 0; i < items.length; i++) {
+    var d = document.createElement('button');
+    d.type = 'button';
+    d.className = 'walk-dot';
+    d.setAttribute('role', 'tab');
+    d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    dots.appendChild(d);
+  }
+  scroll.parentNode.insertBefore(dots, scroll.nextSibling);
+  var dotEls = Array.prototype.slice.call(dots.children);
+
+  var GAP = 28;
+  var activeIdx = -1;
+  var isInitial = true;
+
+  // Float pause window — runs while the user is dragging or while a
+  // programmatic advance is settling. Cleared 600ms after the last change.
+  var floatTimer = null;
+  function pauseFloat() {
+    for (var i = 0; i < items.length; i++) items[i].classList.add('no-float');
+    if (floatTimer) { clearTimeout(floatTimer); floatTimer = null; }
+  }
+  function scheduleFloatResume() {
+    if (floatTimer) clearTimeout(floatTimer);
+    floatTimer = setTimeout(function () {
+      for (var i = 0; i < items.length; i++) items[i].classList.remove('no-float');
+      floatTimer = null;
+    }, 600);
+  }
+
+  // Debounced parallax — fires once per real "advance" (after rapid
+  // intermediate setActive calls during a smooth scroll have settled).
+  var parallaxTimer = null;
+  var parallaxFromIdx = -1;
+  function clearParallaxClasses() {
+    for (var i = 0; i < items.length; i++) {
+      items[i].classList.remove('is-entering');
+      items[i].classList.remove('is-leaving');
+    }
+  }
+  function triggerParallax(fromIdx, toIdx) {
+    if (fromIdx < 0 || toIdx < 0 || fromIdx === toIdx) return;
+    clearParallaxClasses();
+    var prev = items[fromIdx];
+    var next = items[toIdx];
+    // Force reflow so re-adding the class restarts the animation.
+    /* eslint-disable no-unused-expressions */
+    void prev.offsetWidth;
+    void next.offsetWidth;
+    /* eslint-enable no-unused-expressions */
+    prev.classList.add('is-leaving');
+    next.classList.add('is-entering');
+    setTimeout(function () {
+      prev.classList.remove('is-leaving');
+      next.classList.remove('is-entering');
+    }, 420);
+  }
+
+  function setActive(idx) {
+    if (idx === activeIdx) return;
+    var prev = activeIdx;
+    activeIdx = idx;
+    for (var i = 0; i < items.length; i++) {
+      var on = i === idx;
+      var adj = Math.abs(i - idx) === 1;
+      items[i].classList.toggle('is-active', on);
+      items[i].classList.toggle('is-adjacent', adj);
+      dotEls[i].classList.toggle('is-active', on);
+      dotEls[i].setAttribute('aria-selected', on ? 'true' : 'false');
+    }
+
+    // Skip parallax on the very first activation — first card should
+    // load flush and at rest, not animate in.
+    if (isInitial) { isInitial = false; return; }
+
+    // Capture earliest "from" across a burst of changes, then fire
+    // parallax once 60ms after the last change.
+    if (parallaxFromIdx === -1) parallaxFromIdx = prev;
+    if (parallaxTimer) clearTimeout(parallaxTimer);
+    parallaxTimer = setTimeout(function () {
+      triggerParallax(parallaxFromIdx, activeIdx);
+      parallaxFromIdx = -1;
+      parallaxTimer = null;
+      scheduleFloatResume();
+    }, 60);
+
+    // Float stays paused until the burst settles.
+    pauseFloat();
+  }
+
+  function snapTargetFor(i) {
+    var it = items[i];
+    var ideal = it.offsetLeft + it.offsetWidth / 2 - scroll.clientWidth / 2;
+    var max = scroll.scrollWidth - scroll.clientWidth;
+    return Math.max(0, Math.min(max, ideal));
+  }
+
+  function getActiveIndex() {
+    var sl = scroll.scrollLeft;
+    var max = scroll.scrollWidth - scroll.clientWidth;
+    // Edge bias: pin to first/last when scroll is at extremes (handles clamped snap)
+    if (sl <= 1) return 0;
+    if (sl >= max - 1) return items.length - 1;
+    var best = 0, bestDist = Infinity;
+    for (var i = 0; i < items.length; i++) {
+      var c = items[i].offsetLeft + items[i].offsetWidth / 2;
+      var d = Math.abs(c - (sl + scroll.clientWidth / 2));
+      if (d < bestDist) { bestDist = d; best = i; }
+    }
+    return best;
+  }
+
+  function scrollToIndex(idx, smooth) {
+    idx = Math.max(0, Math.min(items.length - 1, idx));
+    scroll.scrollTo({ left: snapTargetFor(idx), behavior: smooth === false ? 'auto' : 'smooth' });
+  }
+
+  // Scroll → update active (rAF-throttled)
+  var pending = false;
+  scroll.addEventListener('scroll', function () {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(function () {
+      pending = false;
+      setActive(getActiveIndex());
+    });
+  }, { passive: true });
+
+  // Pill click → snap
+  dotEls.forEach(function (d, i) {
+    d.addEventListener('click', function (e) { e.preventDefault(); scrollToIndex(i); });
+  });
+
+  // Card click → snap to it (only desktop, only when not actively dragging)
+  var justDragged = false;
+  items.forEach(function (it, i) {
+    it.addEventListener('click', function (e) {
+      if (justDragged) { e.preventDefault(); return; }
+      if (i !== activeIdx) scrollToIndex(i);
+    });
+  });
+
+  // Desktop pointer drag — touch falls through to native scroll-snap
+  var isDown = false, startX = 0, startScroll = 0;
+  var lastX = 0, lastT = 0, vx = 0;
+  var dragMoved = false;
+
+  scroll.addEventListener('pointerdown', function (e) {
+    if (e.pointerType === 'touch') return;
+    if (e.button !== 0) return;
+    isDown = true;
+    dragMoved = false;
+    pauseFloat();
+    try { scroll.setPointerCapture(e.pointerId); } catch (_) {}
+    scroll.classList.add('is-dragging');
+    startX = e.clientX;
+    startScroll = scroll.scrollLeft;
+    lastX = e.clientX;
+    lastT = performance.now();
+    vx = 0;
+  });
+
+  scroll.addEventListener('pointermove', function (e) {
+    if (!isDown) return;
+    var now = performance.now();
+    var dx = e.clientX - lastX;
+    var dt = now - lastT;
+    if (dt > 0) vx = dx / dt; // px / ms
+    lastX = e.clientX;
+    lastT = now;
+    var totalDx = e.clientX - startX;
+    if (Math.abs(totalDx) > 3) dragMoved = true;
+    // 0.85 multiplier — subtle resistance
+    scroll.scrollLeft = startScroll - totalDx * 0.85;
+  });
+
+  function endDrag(e) {
+    if (!isDown) return;
+    isDown = false;
+    try { scroll.releasePointerCapture(e.pointerId); } catch (_) {}
+    scroll.classList.remove('is-dragging');
+    if (!dragMoved) return; // pure click — let click handler run
+
+    var totalDx = lastX - startX;
+    var cardSpan = items[0].offsetWidth + GAP;
+    var threshold = cardSpan * 0.3;
+    var current = getActiveIndex();
+    var target = current;
+
+    if (Math.abs(vx) > 0.5) {
+      // Fast flick — commit in flick direction
+      target = current + (vx < 0 ? 1 : -1);
+    } else if (Math.abs(totalDx) > threshold) {
+      // Slow drag past 30% threshold — commit
+      target = current + (totalDx < 0 ? 1 : -1);
+    }
+    scrollToIndex(target);
+    justDragged = true;
+    setTimeout(function () { justDragged = false; }, 80);
+  }
+
+  scroll.addEventListener('pointerup', endDrag);
+  scroll.addEventListener('pointercancel', endDrag);
+  scroll.addEventListener('pointerleave', function (e) { if (isDown) endDrag(e); });
+
+  // Prevent native image drag from hijacking drag
+  scroll.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+  // Init
+  requestAnimationFrame(function () { setActive(getActiveIndex()); });
+  window.addEventListener('resize', function () {
+    // Re-snap to current after layout change
+    setActive(getActiveIndex());
+  });
+})();
+</script>
+
+<script>
+(function () {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+  // Theme detection — landing page = dark, all others = light.
+  var landingFile = 'whitelist landing page.html';
+  function isDark(pathname) {
+    try { return decodeURIComponent(pathname).toLowerCase().endsWith(landingFile); }
+    catch (_) { return false; }
+  }
+  var thisIsDark = isDark(location.pathname);
+
+  // Should we fade IN on load? Only if the previous page was on the other theme.
+  var shouldFadeIn = false;
+  if (document.referrer) {
+    try {
+      var ref = new URL(document.referrer);
+      if (ref.origin === location.origin && isDark(ref.pathname) !== thisIsDark) {
+        shouldFadeIn = true;
+      }
+    } catch (_) {}
+  }
+
+  var overlay = document.createElement('div');
+  overlay.className = 'page-fade';
+  overlay.setAttribute('aria-hidden', 'true');
+  if (!shouldFadeIn) overlay.classList.add('is-ready'); // append already hidden — no flash
+  document.body.appendChild(overlay);
+  if (shouldFadeIn) {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { overlay.classList.add('is-ready'); });
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (!href) return;
+    if (a.target && a.target !== '' && a.target !== '_self') return;
+    if (a.hasAttribute('download')) return;
+    if (e.button !== 0) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (e.defaultPrevented) return;
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) return;
+    if (href.charAt(0) === '#') return;
+    var dest;
+    try { dest = new URL(a.href, location.href); }
+    catch (_) { return; }
+    if (dest.origin !== location.origin) return;
+    // Same path, only hash change -> let browser handle it (in-page jump)
+    if (dest.pathname === location.pathname && dest.search === location.search && dest.hash && dest.hash !== location.hash) return;
+    // Theme-boundary check: only fade when crossing dark<->light.
+    if (thisIsDark === isDark(dest.pathname)) return; // same theme: normal nav, no fade
+    e.preventDefault();
+    overlay.classList.remove('is-ready');
+    overlay.classList.add('is-leaving');
+    setTimeout(function () { window.location.href = a.href; }, 210);
+  });
+
+  window.addEventListener('pageshow', function () {
+    overlay.classList.remove('is-leaving');
+    overlay.classList.add('is-ready');
+  });
+})();
+</script>
+
+</body>
+</html>
